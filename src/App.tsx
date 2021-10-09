@@ -1,23 +1,16 @@
 /*
  * @Author: Censwin
  * @Date: 2021-10-08 23:19:50
- * @LastEditTime: 2021-10-09 00:15:32
- * @Description: 
+ * @LastEditTime: 2021-10-09 15:46:38
+ * @Description:
  * @FilePath: /whale-design/src/App.tsx
  */
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
 
 function App() {
-const a = "123"
-if ( a == '123') {
-  const a = " 123"
-}
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
@@ -30,8 +23,10 @@ if ( a == '123') {
           Learn React
         </a>
       </header>
+      <h1>test</h1>
+      <code>const a = b</code>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
