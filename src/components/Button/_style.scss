@@ -1,4 +1,10 @@
 .btn {
+  @include button-size(
+    $btn-padding-x,
+    $btn-padding-y,
+    $btn-font-size,
+    $btn-border-radius
+  );
   position: relative;
   display: inline-block;
   font-weight: $btn-font-weight;
@@ -6,6 +12,58 @@
   color: $body-color;
   text-align: center;
   border: $btn-border-width solid transparent;
-  border-radius: $border-radius;
-  padding: $btn-padding-y $btn-padding-x;
+  box-shadow: $btn-box-shadow;
+  transition: $btn-transition;
+  user-select: none;
+  &.disabled,
+  &[disabled] {
+    cursor: not-allowed;
+    opacity: $btn-disabled-opacity;
+    box-shadow: none;
+  }
+}
+
+.btn-lg {
+  @include button-size(
+    $btn-padding-x-lg,
+    $btn-padding-y-lg,
+    $btn-font-size-lg,
+    $btn-border-radius-lg
+  );
+}
+
+.btn-sm {
+  @include button-size(
+    $btn-padding-x-sm,
+    $btn-padding-y-sm,
+    $btn-font-size-sm,
+    $btn-border-radius-sm
+  );
+}
+
+.btn-primary {
+  @include button-style($primary, $primary, $white);
+}
+
+.btn-warring {
+  @include button-style($warning, $warning, $white);
+}
+
+.btn-danger {
+  @include button-style($danger, $danger, $white);
+}
+
+.btn-link {
+  color: $link-color;
+  box-shadow: none;
+  background: transparent;
+  border: none;
+  &[disabled] {
+    cursor: not-allowed;
+    color: $gray-600;
+  }
+}
+
+.btn-default {
+  @include button-style($white, $gray-400, $body-color);
 }

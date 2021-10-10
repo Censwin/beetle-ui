@@ -1,9 +1,12 @@
 // partial 作为局部文件不会被编译仅做导入使用
 // partial 文件格式引入时不需要添加下划线
 // partial 会将文件包含在css中不需要额外的请求
-@import 'variables';
+@import "variables";
 
-@import 'reboot';
+@import "reboot";
+
+// mixin
+@import "./mixin";
 
 // 添加button样式
-@import '../components/Button/style';
+@import "../components/Button/style";
