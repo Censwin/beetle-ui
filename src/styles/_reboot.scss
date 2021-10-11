@@ -214,11 +214,11 @@ sup {
 
 a {
   color: $link-color;
-  text-decoration: $link-decoration;
+  text-decoration: none;
 
   &:hover {
     color: $link-hover-color;
-    text-decoration: $link-hover-decoration;
+    text-decoration: none;
   }
 }
 
@@ -345,8 +345,7 @@ button {
 // Credit: https://github.com/suitcss/base/
 
 button:focus {
-  outline: 1px dotted;
-  outline: 5px auto -webkit-focus-ring-color;
+  outline: 0;
 }
 
 // 1. Remove the margin in Firefox and Safari
