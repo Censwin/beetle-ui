@@ -1,7 +1,7 @@
 /*
  * @Author: Censwin
  * @Date: 2021-10-10 22:48:09
- * @LastEditTime: 2021-10-11 14:44:24
+ * @LastEditTime: 2021-10-11 17:58:27
  * @Description:
  * @FilePath: /whale-design/src/components/Button/button.tsx
  */
@@ -45,11 +45,12 @@ const Button: React.FC<ButtonProps> = (props) => {
     className: userDefinedClassName,
     ...NativeAttr
   } = props
+  console.log(_disabled)
   const classes = classNames('btn', {
     [`btn-${btnType}`]: btnType,
     [`btn-${size}`]: size,
     disabled: _disabled,
-    userDefinedClassName,
+    [`${userDefinedClassName}`]: userDefinedClassName,
   })
 
   const handleClick = (

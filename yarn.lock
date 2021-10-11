@@ -1421,31 +1421,10 @@
     "core-js-pure" "^3.16.0"
     "regenerator-runtime" "^0.13.4"
 
-"@babel/runtime@^7.10.2":
+"@babel/runtime@^7.10.2", "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.5", "@babel/runtime@^7.5.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.8.7", "@babel/runtime@^7.9.2":
   "integrity" "sha1-/RfRa/34eObdAtGXU6OfqKjZyEo="
   "resolved" "https://registry.nlark.com/@babel/runtime/download/@babel/runtime-7.15.4.tgz?cache=0&sync_timestamp=1630618785994&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40babel%2Fruntime%2Fdownload%2F%40babel%2Fruntime-7.15.4.tgz"
   "version" "7.15.4"
-  dependencies:
-    "regenerator-runtime" "^0.13.4"
-
-"@babel/runtime@^7.11.2":
-  "integrity" "sha1-/RfRa/34eObdAtGXU6OfqKjZyEo="
-  "resolved" "https://registry.nlark.com/@babel/runtime/download/@babel/runtime-7.15.4.tgz?cache=0&sync_timestamp=1630618785994&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40babel%2Fruntime%2Fdownload%2F%40babel%2Fruntime-7.15.4.tgz"
-  "version" "7.15.4"
-  dependencies:
-    "regenerator-runtime" "^0.13.4"
-
-"@babel/runtime@^7.5.5":
-  "integrity" "sha1-/RfRa/34eObdAtGXU6OfqKjZyEo="
-  "resolved" "https://registry.nlark.com/@babel/runtime/download/@babel/runtime-7.15.4.tgz?cache=0&sync_timestamp=1630618785994&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40babel%2Fruntime%2Fdownload%2F%40babel%2Fruntime-7.15.4.tgz"
-  "version" "7.15.4"
-  dependencies:
-    "regenerator-runtime" "^0.13.4"
-
-"@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.8.7":
-  "integrity" "sha512-cTIudHnzuWLS56ik4DnRnqqNf8MkdUzV4iFFI1h7Jo9xvrpQROYaAnaSd2mHLQAzzZAPfATynX5ord6YlNYNMA=="
-  "resolved" "https://registry.npmjs.org/@babel/runtime/-/runtime-7.9.0.tgz"
-  "version" "7.9.0"
   dependencies:
     "regenerator-runtime" "^0.13.4"
 
@@ -1836,6 +1815,17 @@
     "@types/yargs" "^15.0.0"
     "chalk" "^4.0.0"
 
+"@jest/types@^27.2.5":
+  "integrity" "sha1-QgdlwFJgXnVoaYLSSwYbTLuiITI="
+  "resolved" "https://registry.npmmirror.com/@jest/types/download/@jest/types-27.2.5.tgz"
+  "version" "27.2.5"
+  dependencies:
+    "@types/istanbul-lib-coverage" "^2.0.0"
+    "@types/istanbul-reports" "^3.0.0"
+    "@types/node" "*"
+    "@types/yargs" "^16.0.0"
+    "chalk" "^4.0.0"
+
 "@nodelib/fs.scandir@2.1.5":
   "integrity" "sha1-dhnC6yGyVIP20WdUi0z9WnSIw9U="
   "resolved" "https://registry.nlark.com/@nodelib/fs.scandir/download/@nodelib/fs.scandir-2.1.5.tgz"
@@ -2038,10 +2028,59 @@
     "@svgr/plugin-svgo" "^5.5.0"
     "loader-utils" "^2.0.0"
 
+"@testing-library/dom@^8.0.0", "@testing-library/dom@>=7.21.4":
+  "integrity" "sha1-I0MVxpcb44D8nL8LAxraPp8L/gk="
+  "resolved" "https://registry.npmmirror.com/@testing-library/dom/download/@testing-library/dom-8.7.2.tgz?cache=0&sync_timestamp=1633350638106&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2F%40testing-library%2Fdom%2Fdownload%2F%40testing-library%2Fdom-8.7.2.tgz"
+  "version" "8.7.2"
+  dependencies:
+    "@babel/code-frame" "^7.10.4"
+    "@babel/runtime" "^7.12.5"
+    "@types/aria-query" "^4.2.0"
+    "aria-query" "^4.2.2"
+    "chalk" "^4.1.0"
+    "dom-accessibility-api" "^0.5.6"
+    "lz-string" "^1.4.4"
+    "pretty-format" "^27.0.2"
+
+"@testing-library/jest-dom@^5.14.1":
+  "integrity" "sha1-hQHhbx5VpV1nX+c+7O4yza3bl2Y="
+  "resolved" "https://registry.nlark.com/@testing-library/jest-dom/download/@testing-library/jest-dom-5.14.1.tgz?cache=0&sync_timestamp=1623430092237&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40testing-library%2Fjest-dom%2Fdownload%2F%40testing-library%2Fjest-dom-5.14.1.tgz"
+  "version" "5.14.1"
+  dependencies:
+    "@babel/runtime" "^7.9.2"
+    "@types/testing-library__jest-dom" "^5.9.1"
+    "aria-query" "^4.2.2"
+    "chalk" "^3.0.0"
+    "css" "^3.0.0"
+    "css.escape" "^1.5.1"
+    "dom-accessibility-api" "^0.5.6"
+    "lodash" "^4.17.15"
+    "redent" "^3.0.0"
+
+"@testing-library/react@^12.1.2":
+  "integrity" "sha1-8byaRZQ0YfoqWYu0WX3xrgRM/HY="
+  "resolved" "https://registry.npmmirror.com/@testing-library/react/download/@testing-library/react-12.1.2.tgz?cache=0&sync_timestamp=1633267221140&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2F%40testing-library%2Freact%2Fdownload%2F%40testing-library%2Freact-12.1.2.tgz"
+  "version" "12.1.2"
+  dependencies:
+    "@babel/runtime" "^7.12.5"
+    "@testing-library/dom" "^8.0.0"
+
+"@testing-library/user-event@^13.3.0":
+  "integrity" "sha1-LOUJU7iFxFKist+IChmYY3WZ3PU="
+  "resolved" "https://registry.npmmirror.com/@testing-library/user-event/download/@testing-library/user-event-13.3.0.tgz?cache=0&sync_timestamp=1633857022652&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2F%40testing-library%2Fuser-event%2Fdownload%2F%40testing-library%2Fuser-event-13.3.0.tgz"
+  "version" "13.3.0"
+  dependencies:
+    "@babel/runtime" "^7.12.5"
+
 "@tootallnate/once@1":
   "integrity" "sha1-zLkURTYBeaBOf+av94wA/8Hur4I="
   "resolved" "https://registry.npmmirror.com/@tootallnate/once/download/@tootallnate/once-1.1.2.tgz?cache=0&sync_timestamp=1632734160633&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2F%40tootallnate%2Fonce%2Fdownload%2F%40tootallnate%2Fonce-1.1.2.tgz"
   "version" "1.1.2"
+
+"@types/aria-query@^4.2.0":
+  "integrity" "sha1-7U4K2SMGpwT5+xMqDPz3dIbb4rw="
+  "resolved" "https://registry.nlark.com/@types/aria-query/download/@types/aria-query-4.2.2.tgz"
+  "version" "4.2.2"
 
 "@types/babel__core@^7.0.0", "@types/babel__core@^7.1.7":
   "integrity" "sha1-vBLHS31l6C0ph2tdC69cYlrFhwI="
@@ -2156,6 +2195,14 @@
   dependencies:
     "@types/istanbul-lib-report" "*"
 
+"@types/jest@*", "@types/jest@^27.0.2":
+  "integrity" "sha1-rDg8TUqt3Sm78rkW2NEFwwSl/Nc="
+  "resolved" "https://registry.nlark.com/@types/jest/download/@types/jest-27.0.2.tgz"
+  "version" "27.0.2"
+  dependencies:
+    "jest-diff" "^27.0.0"
+    "pretty-format" "^27.0.0"
+
 "@types/json-schema@*", "@types/json-schema@^7.0.5", "@types/json-schema@^7.0.7", "@types/json-schema@^7.0.8":
   "integrity" "sha1-l+3JA36gw4WFMgsolk3eOznkZg0="
   "resolved" "https://registry.nlark.com/@types/json-schema/download/@types/json-schema-7.0.9.tgz?cache=0&sync_timestamp=1629708189890&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Fjson-schema%2Fdownload%2F%40types%2Fjson-schema-7.0.9.tgz"
@@ -2254,6 +2301,13 @@
   "resolved" "https://registry.nlark.com/@types/tapable/download/@types/tapable-1.0.8.tgz?cache=0&sync_timestamp=1629709492234&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Ftapable%2Fdownload%2F%40types%2Ftapable-1.0.8.tgz"
   "version" "1.0.8"
 
+"@types/testing-library__jest-dom@^5.9.1":
+  "integrity" "sha1-AUFipc7mVxgZ1I6ZmYBpTi9lfDw="
+  "resolved" "https://registry.nlark.com/@types/testing-library__jest-dom/download/@types/testing-library__jest-dom-5.14.1.tgz"
+  "version" "5.14.1"
+  dependencies:
+    "@types/jest" "*"
+
 "@types/uglify-js@*":
   "integrity" "sha1-XoienoHpQkXHW2RQYA4cXqKHiuo="
   "resolved" "https://registry.nlark.com/@types/uglify-js/download/@types/uglify-js-3.13.1.tgz"
@@ -2291,6 +2345,13 @@
   "integrity" "sha1-Jtgh3biecEkhYLZtEKDrbfj2+wY="
   "resolved" "https://registry.nlark.com/@types/yargs/download/@types/yargs-15.0.14.tgz"
   "version" "15.0.14"
+  dependencies:
+    "@types/yargs-parser" "*"
+
+"@types/yargs@^16.0.0":
+  "integrity" "sha1-JqrZjdLCo45CEIbqmtQrnlFkKXc="
+  "resolved" "https://registry.nlark.com/@types/yargs/download/@types/yargs-16.0.4.tgz?cache=0&sync_timestamp=1632251170473&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Fyargs%2Fdownload%2F%40types%2Fyargs-16.0.4.tgz"
+  "version" "16.0.4"
   dependencies:
     "@types/yargs-parser" "*"
 
@@ -2724,12 +2785,7 @@
   "resolved" "https://registry.nlark.com/ansi-regex/download/ansi-regex-4.1.0.tgz?cache=0&sync_timestamp=1631634988487&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fansi-regex%2Fdownload%2Fansi-regex-4.1.0.tgz"
   "version" "4.1.0"
 
-"ansi-regex@^5.0.0":
-  "integrity" "sha512-bY6fj56OUQ0hU1KjFNDQuJFezqKdrAyFdIevADiqrWHwSlbmBNMHp5ak2f40Pm8JTFyM2mqxkG6ngkHO11f/lg=="
-  "resolved" "https://registry.npmjs.org/ansi-regex/-/ansi-regex-5.0.0.tgz"
-  "version" "5.0.0"
-
-"ansi-regex@^5.0.1":
+"ansi-regex@^5.0.0", "ansi-regex@^5.0.1":
   "integrity" "sha1-CCyyyJyf6GWaMRpTvWpNxTAdswQ="
   "resolved" "https://registry.nlark.com/ansi-regex/download/ansi-regex-5.0.1.tgz?cache=0&sync_timestamp=1631634988487&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fansi-regex%2Fdownload%2Fansi-regex-5.0.1.tgz"
   "version" "5.0.1"
@@ -2753,20 +2809,17 @@
   dependencies:
     "color-convert" "^1.9.0"
 
-"ansi-styles@^4.0.0":
+"ansi-styles@^4.0.0", "ansi-styles@^4.1.0":
   "integrity" "sha1-7dgDYornHATIWuegkG7a00tkiTc="
   "resolved" "https://registry.nlark.com/ansi-styles/download/ansi-styles-4.3.0.tgz"
   "version" "4.3.0"
   dependencies:
     "color-convert" "^2.0.1"
 
-"ansi-styles@^4.1.0":
-  "integrity" "sha512-9VGjrMsG1vePxcSweQsN20KY/c4zN0h9fLjqAbwbPfahM3t+NL+M9HC8xeXG2I8pX5NoamTGNuomEUFI7fcUjA=="
-  "resolved" "https://registry.npmjs.org/ansi-styles/-/ansi-styles-4.2.1.tgz"
-  "version" "4.2.1"
-  dependencies:
-    "@types/color-name" "^1.1.1"
-    "color-convert" "^2.0.1"
+"ansi-styles@^5.0.0":
+  "integrity" "sha1-B0SWkK1Fd30ZJKwquy/IiV26g2s="
+  "resolved" "https://registry.nlark.com/ansi-styles/download/ansi-styles-5.2.0.tgz"
+  "version" "5.2.0"
 
 "anymatch@^2.0.0":
   "integrity" "sha512-5teOsQWABXHHBFP9y3skS5P3d/WfWXpv3FUpy+LorMrNYaT9pI4oLMQX7jzQ2KklNpGpWHzdCXTDT2Y3XGlZBw=="
@@ -3745,7 +3798,15 @@
     "escape-string-regexp" "^1.0.5"
     "supports-color" "^5.3.0"
 
-"chalk@^4.0.0":
+"chalk@^3.0.0":
+  "integrity" "sha1-P3PCv1JlkfV0zEksUeJFY0n4ROQ="
+  "resolved" "https://registry.nlark.com/chalk/download/chalk-3.0.0.tgz?cache=0&sync_timestamp=1627646697260&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fchalk%2Fdownload%2Fchalk-3.0.0.tgz"
+  "version" "3.0.0"
+  dependencies:
+    "ansi-styles" "^4.1.0"
+    "supports-color" "^7.1.0"
+
+"chalk@^4.0.0", "chalk@^4.1.0":
   "integrity" "sha1-qsTit3NKdAhnrrFr8CqtVWoeegE="
   "resolved" "https://registry.nlark.com/chalk/download/chalk-4.1.2.tgz?cache=0&sync_timestamp=1627646655305&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fchalk%2Fdownload%2Fchalk-4.1.2.tgz"
   "version" "4.1.2"
@@ -4357,6 +4418,11 @@
   "resolved" "https://registry.npmjs.org/css-what/-/css-what-2.1.3.tgz"
   "version" "2.1.3"
 
+"css.escape@^1.5.1":
+  "integrity" "sha1-QuJ9T6BK4y+TGktNQZH6nN3ul8s="
+  "resolved" "https://registry.npm.taobao.org/css.escape/download/css.escape-1.5.1.tgz"
+  "version" "1.5.1"
+
 "css@^2.0.0":
   "integrity" "sha512-oUnjmWpy0niI3x/mPL8dVEI1l7MnG3+HHyRPHf+YFSbK+svOhXpmSOcDURUh2aOCgl2grzrOPt1nHLuCVFULLw=="
   "resolved" "https://registry.npmjs.org/css/-/css-2.2.4.tgz"
@@ -4366,6 +4432,15 @@
     "source-map" "^0.6.1"
     "source-map-resolve" "^0.5.2"
     "urix" "^0.1.0"
+
+"css@^3.0.0":
+  "integrity" "sha1-REek1Y/dAzZ8UWyp9krjZc7kql0="
+  "resolved" "https://registry.npm.taobao.org/css/download/css-3.0.0.tgz"
+  "version" "3.0.0"
+  dependencies:
+    "inherits" "^2.0.4"
+    "source-map" "^0.6.1"
+    "source-map-resolve" "^0.6.0"
 
 "cssdb@^4.4.0":
   "integrity" "sha512-LsTAR1JPEM9TpGhl/0p3nQecC2LJ0kD8X5YARu1hk/9I1gril5vDtMZyNxcEpxxDj34YNck/ucjuoUd66K03oQ=="
@@ -4753,6 +4828,11 @@
   "resolved" "https://registry.nlark.com/diff-sequences/download/diff-sequences-26.6.2.tgz?cache=0&sync_timestamp=1624901144186&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fdiff-sequences%2Fdownload%2Fdiff-sequences-26.6.2.tgz"
   "version" "26.6.2"
 
+"diff-sequences@^27.0.6":
+  "integrity" "sha1-MwXLLlWgM5JAVGlcxmAZ/X+OVyM="
+  "resolved" "https://registry.nlark.com/diff-sequences/download/diff-sequences-27.0.6.tgz?cache=0&sync_timestamp=1624900057366&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fdiff-sequences%2Fdownload%2Fdiff-sequences-27.0.6.tgz"
+  "version" "27.0.6"
+
 "diffie-hellman@^5.0.0":
   "integrity" "sha512-kqag/Nl+f3GwyK25fhUMYj81BUOrZ9IuJsjIcDE5icNM9FJHAVm3VcUDxdLPoQtTuUylWm6ZIknYJwwaPxsUzg=="
   "resolved" "https://registry.npmjs.org/diffie-hellman/-/diffie-hellman-5.0.3.tgz"
@@ -4802,6 +4882,11 @@
   "version" "3.0.0"
   dependencies:
     "esutils" "^2.0.2"
+
+"dom-accessibility-api@^0.5.6":
+  "integrity" "sha1-QUgTAS4GW136iZi5kEYMCvEqVCE="
+  "resolved" "https://registry.npmmirror.com/dom-accessibility-api/download/dom-accessibility-api-0.5.8.tgz?cache=0&sync_timestamp=1633696419242&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fdom-accessibility-api%2Fdownload%2Fdom-accessibility-api-0.5.8.tgz"
+  "version" "0.5.8"
 
 "dom-converter@^0.2":
   "integrity" "sha512-gd3ypIPfOMr9h5jIKq8E3sHOTCjeirnl0WK5ZdS1AW0Odt0b1PaWaHdJ4Qk4klv+YB9aJBS7mESXjFoDQPu6DA=="
@@ -6253,8 +6338,8 @@
   "version" "3.0.0"
 
 "has-flag@^4.0.0":
-  "integrity" "sha512-EykJT/Q1KjTWctppgIAgfSO0tKVuZUjhgMr17kqTumMl6Afv3EISleU7qZUzoXDFTAHTDC4NOoG/ZxU3EvlMPQ=="
-  "resolved" "https://registry.npmjs.org/has-flag/-/has-flag-4.0.0.tgz"
+  "integrity" "sha1-lEdx/ZyByBJlxNaUGGDaBrtZR5s="
+  "resolved" "https://registry.nlark.com/has-flag/download/has-flag-4.0.0.tgz"
   "version" "4.0.0"
 
 "has-symbols@^1.0.0", "has-symbols@^1.0.1":
@@ -7291,6 +7376,16 @@
     "jest-get-type" "^26.3.0"
     "pretty-format" "^26.6.2"
 
+"jest-diff@^27.0.0":
+  "integrity" "sha1-kI96aspWU4JFFq0w4Kn9l2flNiM="
+  "resolved" "https://registry.npmmirror.com/jest-diff/download/jest-diff-27.2.5.tgz?cache=0&sync_timestamp=1633701044655&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fjest-diff%2Fdownload%2Fjest-diff-27.2.5.tgz"
+  "version" "27.2.5"
+  dependencies:
+    "chalk" "^4.0.0"
+    "diff-sequences" "^27.0.6"
+    "jest-get-type" "^27.0.6"
+    "pretty-format" "^27.2.5"
+
 "jest-docblock@^26.0.0":
   "integrity" "sha1-Pi+iCJn8koyxO9D/aL03EaNoibU="
   "resolved" "https://registry.nlark.com/jest-docblock/download/jest-docblock-26.0.0.tgz?cache=0&sync_timestamp=1624901148199&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fjest-docblock%2Fdownload%2Fjest-docblock-26.0.0.tgz"
@@ -7338,6 +7433,11 @@
   "integrity" "sha1-6X3Dw/U8K0Bsp6+u1Ek7HQmRmeA="
   "resolved" "https://registry.nlark.com/jest-get-type/download/jest-get-type-26.3.0.tgz?cache=0&sync_timestamp=1624901143561&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fjest-get-type%2Fdownload%2Fjest-get-type-26.3.0.tgz"
   "version" "26.3.0"
+
+"jest-get-type@^27.0.6":
+  "integrity" "sha1-DrXH91WFQnnOm2ip8aQSL2kEfP4="
+  "resolved" "https://registry.nlark.com/jest-get-type/download/jest-get-type-27.0.6.tgz?cache=0&sync_timestamp=1624900056951&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fjest-get-type%2Fdownload%2Fjest-get-type-27.0.6.tgz"
+  "version" "27.0.6"
 
 "jest-haste-map@^26.6.2":
   "integrity" "sha1-3X5g/n3A6fkRoj15xf9/tcLK/qo="
@@ -7641,7 +7741,7 @@
     "merge-stream" "^2.0.0"
     "supports-color" "^7.0.0"
 
-"jest@^26.0.0", "jest@26.6.0":
+"jest@^26.0.0", "jest@^26.6.0", "jest@26.6.0":
   "integrity" "sha1-VGslodjIiFadu+k8rhMXSAhqSiU="
   "resolved" "https://registry.npmmirror.com/jest/download/jest-26.6.0.tgz"
   "version" "26.6.0"
@@ -8074,6 +8174,11 @@
   "version" "6.0.0"
   dependencies:
     "yallist" "^4.0.0"
+
+"lz-string@^1.4.4":
+  "integrity" "sha1-wNjq82BZ9wV5bh40SBHPTEmNOiY="
+  "resolved" "https://registry.npm.taobao.org/lz-string/download/lz-string-1.4.4.tgz"
+  "version" "1.4.4"
 
 "magic-string@^0.25.0", "magic-string@^0.25.7":
   "integrity" "sha1-P0l9b9NMZpxnmNy4IfLvMfVEUFE="
@@ -10080,6 +10185,26 @@
     "ansi-styles" "^4.0.0"
     "react-is" "^17.0.1"
 
+"pretty-format@^27.0.0", "pretty-format@^27.2.5":
+  "integrity" "sha1-fP4qjo8BpbWykpagtw9BQN8IMMU="
+  "resolved" "https://registry.npmmirror.com/pretty-format/download/pretty-format-27.2.5.tgz?cache=0&sync_timestamp=1633701045920&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fpretty-format%2Fdownload%2Fpretty-format-27.2.5.tgz"
+  "version" "27.2.5"
+  dependencies:
+    "@jest/types" "^27.2.5"
+    "ansi-regex" "^5.0.1"
+    "ansi-styles" "^5.0.0"
+    "react-is" "^17.0.1"
+
+"pretty-format@^27.0.2":
+  "integrity" "sha1-fP4qjo8BpbWykpagtw9BQN8IMMU="
+  "resolved" "https://registry.npmmirror.com/pretty-format/download/pretty-format-27.2.5.tgz?cache=0&sync_timestamp=1633701045920&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fpretty-format%2Fdownload%2Fpretty-format-27.2.5.tgz"
+  "version" "27.2.5"
+  dependencies:
+    "@jest/types" "^27.2.5"
+    "ansi-regex" "^5.0.1"
+    "ansi-styles" "^5.0.0"
+    "react-is" "^17.0.1"
+
 "private@^0.1.8":
   "integrity" "sha512-VvivMrbvd2nKkiG38qjULzlc+4Vx4wm/whI9pQD35YrARNnhxeiRktSOhSukRLFNlzg6Br/cJPet5J/u19r/mg=="
   "resolved" "https://registry.npmjs.org/private/-/private-0.1.8.tgz"
@@ -10339,7 +10464,7 @@
     "strip-ansi" "6.0.0"
     "text-table" "0.2.0"
 
-"react-dom@^17.0.2":
+"react-dom@*", "react-dom@^17.0.2":
   "integrity" "sha1-7P+2hF462Nv83EmPDQqTlzZQLCM="
   "resolved" "https://registry.npmmirror.com/react-dom/download/react-dom-17.0.2.tgz?cache=0&sync_timestamp=1633536986711&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Freact-dom%2Fdownload%2Freact-dom-17.0.2.tgz"
   "version" "17.0.2"
@@ -10434,7 +10559,7 @@
   optionalDependencies:
     "fsevents" "^2.1.3"
 
-"react@^17.0.2", "react@>= 16", "react@17.0.2":
+"react@*", "react@^17.0.2", "react@>= 16", "react@17.0.2":
   "integrity" "sha1-0LXMUW0p6z7uOD91tihkz7aAADc="
   "resolved" "https://registry.npmmirror.com/react/download/react-17.0.2.tgz?cache=0&sync_timestamp=1633536959416&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Freact%2Fdownload%2Freact-17.0.2.tgz"
   "version" "17.0.2"
@@ -11439,6 +11564,14 @@
     "source-map-url" "^0.4.0"
     "urix" "^0.1.0"
 
+"source-map-resolve@^0.6.0":
+  "integrity" "sha1-PZ34fiNrU/FtAeWBUPx3EROOXtI="
+  "resolved" "https://registry.npm.taobao.org/source-map-resolve/download/source-map-resolve-0.6.0.tgz"
+  "version" "0.6.0"
+  dependencies:
+    "atob" "^2.1.2"
+    "decode-uri-component" "^0.2.0"
+
 "source-map-support@^0.5.6", "source-map-support@~0.5.12":
   "integrity" "sha512-efyLRJDr68D9hBBNIPWFjhpFzURh+KJykQwvMyW5UiZzYwoF6l4YMMDIJJEyFWxWCqfyxLzz6tSfUFR+kXXsVQ=="
   "resolved" "https://registry.npmjs.org/source-map-support/-/source-map-support-0.5.16.tgz"
@@ -11922,9 +12055,9 @@
     "has-flag" "^4.0.0"
 
 "supports-color@^7.1.0":
-  "integrity" "sha512-oRSIpR8pxT1Wr2FquTNnGet79b3BWljqOuoW/h4oBhxJ/HUbX5nX6JSruTkvXDCFMwDPvsaTTbvMLKZWSy0R5g=="
-  "resolved" "https://registry.npmjs.org/supports-color/-/supports-color-7.1.0.tgz"
-  "version" "7.1.0"
+  "integrity" "sha1-G33NyzK4E4gBs+R4umpRyqiWSNo="
+  "resolved" "https://registry.nlark.com/supports-color/download/supports-color-7.2.0.tgz?cache=0&sync_timestamp=1626703414084&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fsupports-color%2Fdownload%2Fsupports-color-7.2.0.tgz"
+  "version" "7.2.0"
   dependencies:
     "has-flag" "^4.0.0"
 
