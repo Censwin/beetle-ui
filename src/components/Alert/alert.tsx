@@ -1,7 +1,7 @@
 /*
  * @Author: Censwin
  * @Date: 2021-10-11 23:09:21
- * @LastEditTime: 2021-10-11 23:37:58
+ * @LastEditTime: 2021-10-11 23:56:06
  * @Description:
  * @FilePath: /whale-design/src/components/Alert/alert.tsx
  */
@@ -10,7 +10,7 @@ import classNames from "classnames";
 export enum Alerttype {
   Success = "success",
   Error = "error",
-  Warning = "warring",
+  Warning = "warning",
   Info = "info",
 }
 interface IAlertProps {

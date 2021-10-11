@@ -1,17 +1,21 @@
 /*
  * @Author: Censwin
  * @Date: 2021-10-08 23:19:50
- * @LastEditTime: 2021-10-11 23:49:10
+ * @LastEditTime: 2021-10-11 23:55:07
  * @Description:
  * @FilePath: /whale-design/src/App.tsx
  */
 import React from "react";
 import Button, { ButtonType, ButtonSize } from "./components/Button/button";
-import Alert from "./components/Alert/alert";
+import Alert, { Alerttype } from "./components/Alert/alert";
+
 function App() {
   return (
     <div style={{ padding: "20px" }}>
       <Alert message="testtetstestestetsett" />
+      <Alert message="testtetstestestetsett" type={Alerttype.Info} />
+      <Alert message="testtetstestestetsett" type={Alerttype.Success} />
+      <Alert message="testtetstestestetsett" type={Alerttype.Warning} />
       <Button
         btnType={ButtonType.Primary}
         onClick={() => {
