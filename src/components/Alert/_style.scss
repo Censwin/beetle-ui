@@ -1,9 +1,23 @@
 .alert {
   width: 100%;
-  height: $line-height-lg;
   padding: $alert-padding-y $alert-padding-x;
-  margin: $alert-padding-y;
+  margin: $alert-margin-bottom;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  p,
+  h5 {
+    margin-bottom: 0;
+  }
+  .close-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0.6rem;
+    cursor: pointer;
+    opacity: 0.5;
+  }
 }
 
 .alert-error {

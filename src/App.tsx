@@ -1,7 +1,7 @@
 /*
  * @Author: Censwin
  * @Date: 2021-10-08 23:19:50
- * @LastEditTime: 2021-10-11 23:55:07
+ * @LastEditTime: 2021-10-12 00:26:10
  * @Description:
  * @FilePath: /whale-design/src/App.tsx
  */
@@ -12,10 +12,23 @@ import Alert, { Alerttype } from "./components/Alert/alert";
 function App() {
   return (
     <div style={{ padding: "20px" }}>
-      <Alert message="testtetstestestetsett" />
-      <Alert message="testtetstestestetsett" type={Alerttype.Info} />
-      <Alert message="testtetstestestetsett" type={Alerttype.Success} />
-      <Alert message="testtetstestestetsett" type={Alerttype.Warning} />
+      <Alert message="testtetstestestetsett" title="Error" />
+      <Alert
+        message="testtetstestestetsett"
+        title="INFO"
+        type={Alerttype.Info}
+        closable
+      />
+      <Alert
+        message="testtetstestestetsett"
+        title="Success"
+        type={Alerttype.Success}
+      />
+      <Alert
+        message="testtetstestestetsett"
+        title="Warning"
+        type={Alerttype.Warning}
+      />
       <Button
         btnType={ButtonType.Primary}
         onClick={() => {

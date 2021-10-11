@@ -1,11 +1,11 @@
 /*
  * @Author: Censwin
  * @Date: 2021-10-11 23:09:21
- * @LastEditTime: 2021-10-11 23:56:06
+ * @LastEditTime: 2021-10-12 00:27:59
  * @Description:
  * @FilePath: /whale-design/src/components/Alert/alert.tsx
  */
-import React from "react";
+import React, { useState } from "react";
 import classNames from "classnames";
 export enum Alerttype {
   Success = "success",
@@ -16,15 +16,37 @@ export enum Alerttype {
 interface IAlertProps {
   type?: string;
   message?: string;
+  title?: string;
+  closable?: boolean;
 }
 const Alert: React.FC<IAlertProps> = (props) => {
-  const { message, type } = props;
+  const [show, setShow] = useState(true);
+  const { message, type, title, closable } = props;
   const classes = classNames("alert", {
     [`alert-${type}`]: type,
   });
-  return <div className={classes}>{message}</div>;
+  if (show) {
+    return (
+      <div className={classes}>
+        {title && <h5>{title}</h5>}
+        <p>{message}</p>
+        {closable && (
+          <span
+            className="close-btn"
+            onClick={() => {
+              setShow(false);
+            }}
+          >
+            ✖️
+          </span>
+        )}
+      </div>
+    );
+  }
+  return null;
 };
 Alert.defaultProps = {
   type: Alerttype.Error,
+  closable: false,
 };
 export default Alert;
