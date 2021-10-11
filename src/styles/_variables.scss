@@ -200,6 +200,10 @@ $btn-link-color: $link-color !default;
 $btn-link-hover-color: $link-hover-color !default;
 $btn-link-disabled-color: $gray-600 !default;
 
+// 禁用按钮
+$btn-disabled-color: $gray-500;
+$btn-disabled-bg-color: $gray-200;
+
 // 按钮 radius
 $btn-border-radius: $border-radius !default;
 $btn-border-radius-lg: $border-radius-lg !default;

@@ -5,6 +5,7 @@
     $btn-font-size,
     $btn-border-radius
   );
+  background-image: none;
   position: relative;
   display: inline-block;
   font-weight: $btn-font-weight;
@@ -18,8 +19,18 @@
   &.disabled,
   &[disabled] {
     cursor: not-allowed;
-    opacity: $btn-disabled-opacity;
+    background: $btn-disabled-bg-color;
+    color: $btn-disabled-color;
+    border-color: $btn-disabled-color;
     box-shadow: none;
+    > * {
+      pointer-events: none;
+    }
+  }
+  &.disabled:hover {
+    background: $btn-disabled-bg-color;
+    color: $btn-disabled-color;
+    border-color: $btn-disabled-color;
   }
 }
 
@@ -53,17 +64,23 @@
   @include button-style($danger, $danger, $white);
 }
 
+.btn-default {
+  @include button-style($white, $gray-400, $body-color);
+}
+
 .btn-link {
   color: $link-color;
   box-shadow: none;
   background: transparent;
   border: none;
+  &.disabled,
   &[disabled] {
     cursor: not-allowed;
     color: $gray-600;
+    background: transparent;
   }
-}
-
-.btn-default {
-  @include button-style($white, $gray-400, $body-color);
+  &.disabled:hover {
+    background: transparent;
+    color: $gray-600;
+  }
 }
