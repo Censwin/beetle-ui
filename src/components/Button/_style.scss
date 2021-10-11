@@ -1,0 +1,86 @@
+.btn {
+  @include button-size(
+    $btn-padding-x,
+    $btn-padding-y,
+    $btn-font-size,
+    $btn-border-radius
+  );
+  background-image: none;
+  position: relative;
+  display: inline-block;
+  font-weight: $btn-font-weight;
+  line-height: $btn-line-height;
+  color: $body-color;
+  text-align: center;
+  border: $btn-border-width solid transparent;
+  box-shadow: $btn-box-shadow;
+  transition: $btn-transition;
+  user-select: none;
+  &.disabled,
+  &[disabled] {
+    cursor: not-allowed;
+    background: $btn-disabled-bg-color;
+    color: $btn-disabled-color;
+    border-color: $btn-disabled-color;
+    box-shadow: none;
+    > * {
+      pointer-events: none;
+    }
+  }
+  &.disabled:hover {
+    background: $btn-disabled-bg-color;
+    color: $btn-disabled-color;
+    border-color: $btn-disabled-color;
+  }
+}
+
+.btn-lg {
+  @include button-size(
+    $btn-padding-x-lg,
+    $btn-padding-y-lg,
+    $btn-font-size-lg,
+    $btn-border-radius-lg
+  );
+}
+
+.btn-sm {
+  @include button-size(
+    $btn-padding-x-sm,
+    $btn-padding-y-sm,
+    $btn-font-size-sm,
+    $btn-border-radius-sm
+  );
+}
+
+.btn-primary {
+  @include button-style($primary, $primary, $white);
+}
+
+.btn-warring {
+  @include button-style($warning, $warning, $white);
+}
+
+.btn-danger {
+  @include button-style($danger, $danger, $white);
+}
+
+.btn-default {
+  @include button-style($white, $gray-400, $body-color);
+}
+
+.btn-link {
+  color: $link-color;
+  box-shadow: none;
+  background: transparent;
+  border: none;
+  &.disabled,
+  &[disabled] {
+    cursor: not-allowed;
+    color: $gray-600;
+    background: transparent;
+  }
+  &.disabled:hover {
+    background: transparent;
+    color: $gray-600;
+  }
+}
