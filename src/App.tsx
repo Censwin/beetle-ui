@@ -1,19 +1,21 @@
 /*
  * @Author: Censwin
  * @Date: 2021-10-08 23:19:50
- * @LastEditTime: 2021-10-11 17:58:37
+ * @LastEditTime: 2021-10-11 23:49:10
  * @Description:
  * @FilePath: /whale-design/src/App.tsx
  */
-import React from 'react'
-import Button, { ButtonType, ButtonSize } from './components/Button/button'
+import React from "react";
+import Button, { ButtonType, ButtonSize } from "./components/Button/button";
+import Alert from "./components/Alert/alert";
 function App() {
   return (
-    <div style={{ padding: '20px' }}>
+    <div style={{ padding: "20px" }}>
+      <Alert message="testtetstestestetsett" />
       <Button
         btnType={ButtonType.Primary}
         onClick={() => {
-          alert(1)
+          alert(1);
         }}
       >
         Primary
@@ -21,8 +23,8 @@ function App() {
       <Button size={ButtonSize.Large} btnType={ButtonType.Default}>
         Default
       </Button>
-      <Button size={ButtonSize.Small} btnType={ButtonType.Warring}>
-        Warring
+      <Button size={ButtonSize.Small} btnType={ButtonType.Warning}>
+        Warning
       </Button>
       <Button
         size={ButtonSize.Large}
@@ -41,7 +43,7 @@ function App() {
       </Button>
       {/* <Button btnType={ButtonType.Link}>Link</Button> */}
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

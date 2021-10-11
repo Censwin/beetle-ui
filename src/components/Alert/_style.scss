@@ -1,0 +1,22 @@
+.alert {
+  width: 100%;
+  height: $line-height-lg;
+  padding: $alert-padding-y $alert-padding-x;
+  position: relative;
+}
+
+.alert-error {
+  @include alert-style($danger);
+}
+
+.alert-info {
+  @include alert-style($primary);
+}
+
+.alert-success {
+  @include alert-style($success);
+}
+
+.alert-warning {
+  @include alert-style($warning);
+}
