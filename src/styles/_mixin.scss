@@ -34,3 +34,9 @@
     border-color: $active-border-color;
   }
 }
+
+@mixin alert-style($bgColor) {
+  background-color: lighten($bgColor, 43);
+  border: $btn-border-width solid lighten($bgColor, 20);
+  border-radius: $btn-border-radius;
+}

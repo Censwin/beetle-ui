@@ -34,11 +34,11 @@ $light: $gray-100 !default;
 $dark: $gray-800 !default;
 
 // 字体
-$font-family-sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-  'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
-  'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji' !default; // 最佳方案字体
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+  "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default; // 最佳方案字体
 $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
-  'Liberation Mono', 'Courier New', monospace !default; // 等宽字体
+  "Liberation Mono", "Courier New", monospace !default; // 等宽字体
 $font-family-base: $font-family-sans-serif !default;
 
 // 字体大小
@@ -211,3 +211,8 @@ $btn-border-radius-sm: $border-radius-sm !default;
 
 $btn-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
   border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !default;
+
+// alert
+$alert-padding-y: 0.8rem !default;
+$alert-padding-x: 0.5rem !default;
+$alert-margin-bottom: 0.6rem !default;
