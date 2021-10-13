@@ -16,7 +16,6 @@ const MenuItem: React.FC<IMenuItemProps> = (props) => {
     'is-disabled': disabled,
     'menu-item-active': index === _indexFromMenu,
   })
-  console.log(classes)
   const handleClick = () => {
     if (onSelect && !disabled) onSelect(index)
   }

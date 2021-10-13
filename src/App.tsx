@@ -1,7 +1,7 @@
 /*
  * @Author: Censwin
  * @Date: 2021-10-08 23:19:50
- * @LastEditTime: 2021-10-13 15:33:28
+ * @LastEditTime: 2021-10-13 17:38:14
  * @Description:
  * @FilePath: /whale-design/src/App.tsx
  */
@@ -10,16 +10,24 @@ import Button, { ButtonType, ButtonSize } from './components/Button/button'
 import Alert, { Alerttype } from './components/Alert/alert'
 import Menu from './components/Menu/menu'
 import MenuItem from './components/Menu/menuItem'
+import SubMenu from './components/Menu/subMenu'
 
 function App() {
   return (
     <div style={{ padding: '20px' }}>
-      <Menu mode="vertical">
+      <Menu mode="horizontal">
         <MenuItem>11111</MenuItem>
         <MenuItem disabled={true}>22222</MenuItem>
         <MenuItem>33333</MenuItem>
         <MenuItem>44444</MenuItem>
+        <SubMenu title="test">
+          <MenuItem>33333</MenuItem>
+          <MenuItem>44444</MenuItem>
+        </SubMenu>
       </Menu>
+      <p>1</p>
+      <p>2</p>
+      <p>3</p>
       <Alert message="testtetstestestetsett" title="Error" />
       <Alert
         message="testtetstestestetsett"

@@ -29,6 +29,7 @@ const Menu: React.FC<IMenuProps> = (props) => {
   const [currentActive, setActive] = useState(defaultSelectedIndex)
   const classes = classNames('whale-menu', _className, {
     'menu-vertical': mode === 'vertical',
+    'menu-horizontal': mode !== 'vertical',
   })
   const handleClick = (index: string) => {
     setActive(index)
@@ -46,7 +47,7 @@ const Menu: React.FC<IMenuProps> = (props) => {
       const childElement =
         child as React.FunctionComponentElement<IMenuItemProps>
       const { displayName } = childElement.type
-      if (displayName === 'MenuItem') {
+      if (displayName === 'MenuItem' || displayName === 'SubMenu') {
         return React.cloneElement(childElement, {
           index,
         })
