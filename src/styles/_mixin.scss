@@ -17,11 +17,7 @@
   border-color: $borderColor;
   color: $color;
   outline-color: $backgroundColor;
-  &:hover {
-    background: $hover-bg-color;
-    outline-color: $hover-bg-color;
-    border-color: $hover-border-color;
-  }
+  &:hover,
   &:focus,
   &.focus {
     background: $hover-bg-color;

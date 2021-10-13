@@ -1,21 +1,21 @@
 import React, { createContext, useState, useMemo } from 'react'
 import classNames from 'classnames'
-
-type SelectCallback = (index: string) => void
+import { IMenuItemProps } from './menuItem'
+type SelectCallback = (index: string | number) => void
 interface IMenuContext {
-  index: string
+  index: string | number
   onSelect?: SelectCallback
 }
 type MenuModes = 'vertical' | 'horizontal'
 export interface IMenuProps {
-  defaultSelectedIndex?: string
+  defaultSelectedIndex?: string | number
   className?: string
   mode?: MenuModes
   style?: React.CSSProperties
   onSelect?: SelectCallback
 }
 
-export const MenuContext = createContext<IMenuContext>({ index: '0' })
+export const MenuContext = createContext<IMenuContext>({ index: 0 })
 
 const Menu: React.FC<IMenuProps> = (props) => {
   const {
@@ -41,17 +41,30 @@ const Menu: React.FC<IMenuProps> = (props) => {
     }),
     [currentActive, defaultSelectedIndex]
   )
-
+  const renderChildren = () => {
+    return React.Children.map(children, (child, index) => {
+      const childElement =
+        child as React.FunctionComponentElement<IMenuItemProps>
+      const { displayName } = childElement.type
+      if (displayName === 'MenuItem') {
+        return React.cloneElement(childElement, {
+          index,
+        })
+      } else {
+        console.error('Warning: The element is not MenuItem')
+      }
+    })
+  }
   return (
-    <ul className={classes} style={_style}>
+    <ul className={classes} style={_style} data-testid="menu-test">
       <MenuContext.Provider value={currentItemObj}>
-        {children}
+        {renderChildren()}
       </MenuContext.Provider>
     </ul>
   )
 }
 Menu.defaultProps = {
-  defaultSelectedIndex: '0',
+  defaultSelectedIndex: 0,
   mode: 'horizontal',
 }
 

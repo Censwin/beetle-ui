@@ -1,7 +1,7 @@
 /*
  * @Author: Censwin
  * @Date: 2021-10-08 23:19:50
- * @LastEditTime: 2021-10-12 18:22:56
+ * @LastEditTime: 2021-10-13 15:33:28
  * @Description:
  * @FilePath: /whale-design/src/App.tsx
  */
@@ -14,11 +14,11 @@ import MenuItem from './components/Menu/menuItem'
 function App() {
   return (
     <div style={{ padding: '20px' }}>
-      <Menu>
-        <MenuItem index="0">11111</MenuItem>
-        <MenuItem index="1">22222</MenuItem>
-        <MenuItem index="2">33333</MenuItem>
-        <MenuItem index="3">44444</MenuItem>
+      <Menu mode="vertical">
+        <MenuItem>11111</MenuItem>
+        <MenuItem disabled={true}>22222</MenuItem>
+        <MenuItem>33333</MenuItem>
+        <MenuItem>44444</MenuItem>
       </Menu>
       <Alert message="testtetstestestetsett" title="Error" />
       <Alert
