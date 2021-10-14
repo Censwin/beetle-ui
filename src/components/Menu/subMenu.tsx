@@ -60,7 +60,11 @@ const SubMenu: React.FC<ISubMenuProps> = (props) => {
         console.error('Warning: The element is not MenuItem')
       }
     })
-    return <ul className={classes}>{childComponent}</ul>
+    return (
+      <ul className={classes} data-testid="sub-menu-wrapper">
+        {childComponent}
+      </ul>
+    )
   }
   return (
     <li key={index} className={classes} {...HoverEvents}>
