@@ -1,7 +1,7 @@
 /*
  * @Author: Censwin
  * @Date: 2021-10-08 23:19:50
- * @LastEditTime: 2021-10-14 14:55:16
+ * @LastEditTime: 2021-10-14 18:02:26
  * @Description:
  * @FilePath: /whale-design/src/App.tsx
  */
@@ -11,10 +11,14 @@ import Alert, { Alerttype } from './components/Alert/alert'
 import Menu from './components/Menu/menu'
 import MenuItem from './components/Menu/menuItem'
 import SubMenu from './components/Menu/subMenu'
-
+import Icon from './components/Icon/icon'
+import { fas } from '@fortawesome/free-solid-svg-icons'
+import { library } from '@fortawesome/fontawesome-svg-core'
+library.add(fas)
 function App() {
   return (
     <div style={{ padding: '20px' }}>
+      <Icon icon="faCoffee" theme="primary" size="10x" />
       <Menu mode="vertical" defaultOpen={['4']}>
         <MenuItem>11111</MenuItem>
         <MenuItem disabled={true}>22222</MenuItem>
