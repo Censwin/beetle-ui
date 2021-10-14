@@ -5,17 +5,23 @@ type SelectCallback = (index: string | number) => void
 interface IMenuContext {
   index: string | number
   onSelect?: SelectCallback
+  mode: MenuModes
+  defaultOpen?: string[]
 }
 type MenuModes = 'vertical' | 'horizontal'
 export interface IMenuProps {
   defaultSelectedIndex?: string | number
   className?: string
-  mode?: MenuModes
+  mode: MenuModes
   style?: React.CSSProperties
   onSelect?: SelectCallback
+  defaultOpen?: string[]
 }
 
-export const MenuContext = createContext<IMenuContext>({ index: 0 })
+export const MenuContext = createContext<IMenuContext>({
+  index: 0,
+  mode: 'horizontal',
+})
 
 const Menu: React.FC<IMenuProps> = (props) => {
   const {
@@ -24,6 +30,7 @@ const Menu: React.FC<IMenuProps> = (props) => {
     mode,
     style: _style,
     children,
+    defaultOpen,
   } = props
   const { onSelect } = props
   const [currentActive, setActive] = useState(defaultSelectedIndex)
@@ -37,10 +44,12 @@ const Menu: React.FC<IMenuProps> = (props) => {
   }
   const currentItemObj: IMenuContext = useMemo(
     () => ({
-      index: currentActive,
+      index: currentActive ? currentActive : '0',
       onSelect: handleClick,
+      mode,
+      defaultOpen,
     }),
-    [currentActive, defaultSelectedIndex]
+    [currentActive]
   )
   const renderChildren = () => {
     return React.Children.map(children, (child, index) => {
@@ -49,7 +58,7 @@ const Menu: React.FC<IMenuProps> = (props) => {
       const { displayName } = childElement.type
       if (displayName === 'MenuItem' || displayName === 'SubMenu') {
         return React.cloneElement(childElement, {
-          index,
+          index: index.toString(),
         })
       } else {
         console.error('Warning: The element is not MenuItem')
@@ -67,6 +76,7 @@ const Menu: React.FC<IMenuProps> = (props) => {
 Menu.defaultProps = {
   defaultSelectedIndex: 0,
   mode: 'horizontal',
+  defaultOpen: [],
 }
 
 export default Menu

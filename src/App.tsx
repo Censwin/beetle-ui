@@ -1,7 +1,7 @@
 /*
  * @Author: Censwin
  * @Date: 2021-10-08 23:19:50
- * @LastEditTime: 2021-10-13 17:38:14
+ * @LastEditTime: 2021-10-14 14:07:41
  * @Description:
  * @FilePath: /whale-design/src/App.tsx
  */
@@ -15,7 +15,7 @@ import SubMenu from './components/Menu/subMenu'
 function App() {
   return (
     <div style={{ padding: '20px' }}>
-      <Menu mode="horizontal">
+      <Menu mode="vertical" defaultOpen={['4']}>
         <MenuItem>11111</MenuItem>
         <MenuItem disabled={true}>22222</MenuItem>
         <MenuItem>33333</MenuItem>
