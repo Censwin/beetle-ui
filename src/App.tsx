@@ -1,7 +1,7 @@
 /*
  * @Author: Censwin
  * @Date: 2021-10-08 23:19:50
- * @LastEditTime: 2021-10-14 23:27:16
+ * @LastEditTime: 2021-10-14 23:51:25
  * @Description:
  * @FilePath: /whale-design/src/App.tsx
  */
@@ -13,8 +13,8 @@ import MenuItem from "./components/Menu/menuItem";
 import SubMenu from "./components/Menu/subMenu";
 import Icon from "./components/Icon/icon";
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { fab } from "@fortawesome/free-brands-svg-icons";
-library.add(fab);
+import { fas } from "@fortawesome/free-solid-svg-icons";
+library.add(fas);
 function App() {
   return (
     <div style={{ padding: "20px" }}>
