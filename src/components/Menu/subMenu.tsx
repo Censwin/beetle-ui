@@ -2,8 +2,10 @@ import React, { useContext, useState } from 'react'
 import classNames from 'classnames'
 import { MenuContext } from './menu'
 import { IMenuItemProps } from './menuItem'
+import Icon from '../Icon/icon'
+import { CSSTransition } from 'react-transition-group'
 export interface ISubMenuProps {
-  index?: number | string
+  index?: string
   title: string
   className?: string
 }
@@ -17,13 +19,15 @@ const SubMenu: React.FC<ISubMenuProps> = (props) => {
     defaultOpen,
   } = useContext(MenuContext)
   const isOpen =
-    index && mode === 'vertical'
-      ? defaultOpen.includes(index.toString())
-      : false
-  const classes = classNames('menu-item menu-sub-item', className, {
-    'menu-item-active': index === _indexFromMenu,
-  })
+    index && mode === 'vertical' ? defaultOpen.includes(index) : false
   const [showSubMenu, setShowSubMenu] = useState(isOpen)
+  const formatIndex = _indexFromMenu.substr(0, _indexFromMenu.indexOf('-'))
+  console.log(formatIndex)
+  const classes = classNames('menu-item menu-sub-item', className, {
+    'menu-item-active': index === formatIndex,
+    'is-opened': showSubMenu,
+    'is-vertical': mode === 'vertical',
+  })
 
   const handleHover = (e: React.MouseEvent, show: boolean) => {
     setShowSubMenu(show)
@@ -61,15 +65,24 @@ const SubMenu: React.FC<ISubMenuProps> = (props) => {
       }
     })
     return (
-      <ul className={classes} data-testid="sub-menu-wrapper">
-        {childComponent}
-      </ul>
+      <CSSTransition
+        in={showSubMenu}
+        classNames="subMenuAnimation"
+        timeout={300}
+        unmountOnExit={true}
+        appear
+      >
+        <ul className={classes} data-testid="sub-menu-wrapper">
+          {childComponent}
+        </ul>
+      </CSSTransition>
     )
   }
   return (
     <li key={index} className={classes} {...HoverEvents}>
       <div className="submenu-title" {...ClickEvents}>
-        {title}
+        <span className="submenu-title-text">{title}</span>
+        <Icon icon="chevron-down" className="submenu-title-icon" />
       </div>
       {renderChildren()}
     </li>
