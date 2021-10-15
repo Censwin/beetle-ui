@@ -1,16 +1,16 @@
 import React, { createContext, useState, useMemo } from 'react'
 import classNames from 'classnames'
 import { IMenuItemProps } from './menuItem'
-type SelectCallback = (index: string | number) => void
+type SelectCallback = (index: string) => void
 interface IMenuContext {
-  index: string | number
+  index: string
   onSelect?: SelectCallback
   mode: MenuModes
   defaultOpen?: string[]
 }
 type MenuModes = 'vertical' | 'horizontal'
 export interface IMenuProps {
-  defaultSelectedIndex?: string | number
+  defaultSelectedIndex?: string
   className?: string
   mode: MenuModes
   style?: React.CSSProperties
@@ -19,7 +19,7 @@ export interface IMenuProps {
 }
 
 export const MenuContext = createContext<IMenuContext>({
-  index: 0,
+  index: '0',
   mode: 'horizontal',
 })
 
@@ -74,7 +74,7 @@ const Menu: React.FC<IMenuProps> = (props) => {
   )
 }
 Menu.defaultProps = {
-  defaultSelectedIndex: 0,
+  defaultSelectedIndex: '0',
   mode: 'horizontal',
   defaultOpen: [],
 }

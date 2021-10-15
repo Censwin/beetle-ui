@@ -31,8 +31,14 @@
   .menu-sub-item {
     position: relative;
     .submenu-title {
-      display: flex;
-      align-items: center;
+      .submenu-title-text {
+        vertical-align: top;
+      }
+      .submenu-title-icon {
+        font-size: 0.7rem;
+        margin-left: 0.5rem;
+        transition: transform 0.5s;
+      }
     }
     .menu-item {
       border: none;
@@ -44,9 +50,14 @@
         color: $primary;
       }
     }
+    &:hover {
+      .submenu-title-icon {
+        transform: rotate(180deg);
+      }
+    }
   }
   .whale-submenu {
-    display: none;
+    // display: none;
     list-style: none;
     padding-left: 0;
     white-space: nowrap;
@@ -65,10 +76,22 @@
       }
     }
   }
-  .whale-shubmenu-open {
-    display: block;
+
+  .is-vertical {
+    .submenu-title-icon {
+      transform: rotate(0);
+    }
   }
+  .is-vertical.is-opened {
+    .submenu-title-icon {
+      transform: rotate(180deg);
+    }
+  }
+  // .whale-shubmenu-open {
+  //   display: block;
+  // }
 }
+// 纵向的submenu样式
 .menu-vertical {
   flex-direction: column;
   border-bottom: 0;
@@ -84,14 +107,36 @@
     }
   }
 }
+// 横向的submenu样式
 .menu-horizontal {
   > .menu-item {
     border-bottom: 2px solid transparent;
   }
   .whale-submenu {
     position: absolute;
-    top: calc(100% + 5px);
+    top: calc(100% + 7px);
     background: $white;
     box-shadow: $submenu-box-shadow;
   }
+}
+
+// submenu  动画
+.subMenuAnimation-enter {
+  opacity: 0;
+  transform: scaleY(0);
+}
+.subMenuAnimation-enter-active {
+  opacity: 1;
+  transform: scaleY(1);
+  transform-origin: center top;
+  transition: opacity 300ms, transform 300ms;
+}
+.subMenuAnimation-exit {
+  opacity: 1;
+}
+.subMenuAnimation-exit-active {
+  opacity: 0;
+  transform: scaleY(0);
+  transform-origin: center top;
+  transition: opacity 300ms, transform 300ms;
 }
