@@ -1,25 +1,26 @@
 /*
  * @Author: Censwin
  * @Date: 2021-10-08 23:19:50
- * @LastEditTime: 2021-10-15 17:42:30
+ * @LastEditTime: 2021-10-16 16:36:31
  * @Description:
  * @FilePath: /whale-design/src/App.tsx
  */
-import React from 'react'
-import Button, { ButtonType, ButtonSize } from './components/Button/button'
-import Alert, { Alerttype } from './components/Alert/alert'
-import Menu from './components/Menu/menu'
-import MenuItem from './components/Menu/menuItem'
-import SubMenu from './components/Menu/subMenu'
-import Icon from './components/Icon/icon'
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { fas } from '@fortawesome/free-solid-svg-icons'
-library.add(fas)
+import React, { useState } from "react";
+import Button, { ButtonType, ButtonSize } from "./components/Button/button";
+import Alert, { Alerttype } from "./components/Alert/alert";
+import Menu from "./components/Menu/menu";
+import MenuItem from "./components/Menu/menuItem";
+import SubMenu from "./components/Menu/subMenu";
+import Icon from "./components/Icon/icon";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fas } from "@fortawesome/free-solid-svg-icons";
+library.add(fas);
 function App() {
+  const [showAlert, setShowAlert] = useState<boolean>(false);
   return (
-    <div style={{ padding: '20px' }}>
+    <div style={{ padding: "20px" }}>
       <Icon icon="coffee" theme="primary" size="10x" />
-      <Menu mode="vertical" defaultOpen={['4']}>
+      <Menu mode="vertical" defaultOpen={["4"]}>
         <MenuItem>11111</MenuItem>
         <MenuItem disabled={true}>22222</MenuItem>
         <MenuItem>33333</MenuItem>
@@ -32,6 +33,14 @@ function App() {
       <p>1</p>
       <p>2</p>
       <p>3</p>
+      {showAlert && (
+        <Alert
+          message="婚纱是生活还是会实话实说刷卡机上的恐惧啊和手机客户端看哈就开始"
+          title="INFO"
+          type={Alerttype.Info}
+          closable
+        />
+      )}
       <Alert message="testtetstestestetsett" title="Error" />
       <Alert
         message="testtetstestestetsett"
@@ -52,7 +61,7 @@ function App() {
       <Button
         btnType={ButtonType.Primary}
         onClick={() => {
-          alert(1);
+          setShowAlert(!showAlert);
         }}
       >
         Primary
