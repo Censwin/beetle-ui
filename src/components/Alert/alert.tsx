@@ -1,12 +1,14 @@
 /*
  * @Author: Censwin
  * @Date: 2021-10-11 23:09:21
- * @LastEditTime: 2021-10-12 00:27:59
+ * @LastEditTime: 2021-10-16 16:35:17
  * @Description:
  * @FilePath: /whale-design/src/components/Alert/alert.tsx
  */
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import classNames from "classnames";
+import Icon from "../Icon/icon";
+import { CSSTransition } from "react-transition-group";
 export enum Alerttype {
   Success = "success",
   Error = "error",
@@ -20,13 +22,22 @@ interface IAlertProps {
   closable?: boolean;
 }
 const Alert: React.FC<IAlertProps> = (props) => {
-  const [show, setShow] = useState(true);
+  const [show, setShow] = useState(false);
   const { message, type, title, closable } = props;
   const classes = classNames("alert", {
     [`alert-${type}`]: type,
   });
-  if (show) {
-    return (
+  useEffect(() => {
+    setShow(true);
+  }, []);
+  return (
+    <CSSTransition
+      in={show}
+      timeout={300}
+      classNames="Alert-wrapper"
+      unmountOnExit={true}
+      appear
+    >
       <div className={classes}>
         {title && <h5>{title}</h5>}
         <p>{message}</p>
@@ -37,13 +48,12 @@ const Alert: React.FC<IAlertProps> = (props) => {
               setShow(false);
             }}
           >
-            ✖️
+            <Icon icon="times-circle" />
           </span>
         )}
       </div>
-    );
-  }
-  return null;
+    </CSSTransition>
+  );
 };
 Alert.defaultProps = {
   type: Alerttype.Error,

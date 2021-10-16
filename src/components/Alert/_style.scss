@@ -13,10 +13,11 @@
   .close-btn {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%) scale(0.6);
+    transform: translateY(-50%);
     right: 0.6rem;
     cursor: pointer;
     opacity: 0.5;
+    font-size: 0.8rem;
   }
 }
 
@@ -34,4 +35,20 @@
 
 .alert-warning {
   @include alert-style($warning);
+}
+
+.Alert-wrapper-enter {
+  transform: scale(0);
+}
+
+.Alert-wrapper-enter-active {
+  transition: transform 0.3s;
+  transform: scale(1);
+}
+.Alert-wrapper-exit {
+  transform: scale(1);
+}
+.Alert-wrapper-exit-active {
+  transition: transform 0.3s;
+  transform: scale(0);
 }
