@@ -1,12 +1,12 @@
 /*
  * @Author: Censwin
  * @Date: 2021-10-10 22:48:09
- * @LastEditTime: 2021-10-11 23:15:19
+ * @LastEditTime: 2021-10-17 17:26:09
  * @Description:
  * @FilePath: /whale-design/src/components/Button/button.tsx
  */
 import classNames from "classnames";
-import * as React from "react";
+import React, { FC, ButtonHTMLAttributes, AnchorHTMLAttributes } from "react";
 
 export enum ButtonSize {
   Large = "lg",
@@ -23,19 +23,19 @@ export enum ButtonType {
 
 interface IBaseButtonProps {
   className?: string;
+  /** 设置button */
   disabled?: boolean;
+  /** 设置button */
   size?: ButtonSize;
   btnType?: ButtonType;
   children?: React.ReactNode;
   href?: string;
 }
-type NativeButtonAttr = IBaseButtonProps &
-  React.ButtonHTMLAttributes<HTMLElement>;
-type NativeAnchorAttr = IBaseButtonProps &
-  React.AnchorHTMLAttributes<HTMLElement>;
+type NativeButtonAttr = IBaseButtonProps & ButtonHTMLAttributes<HTMLElement>;
+type NativeAnchorAttr = IBaseButtonProps & AnchorHTMLAttributes<HTMLElement>;
 export type ButtonProps = Partial<NativeButtonAttr & NativeAnchorAttr>;
 
-const Button: React.FC<ButtonProps> = (props) => {
+const Button: FC<ButtonProps> = (props) => {
   const {
     btnType,
     disabled: _disabled,
