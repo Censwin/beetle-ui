@@ -7,7 +7,6 @@
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/react-fontawesome": "^0.1.15",
-    "@types/storybook__addon-info": "^5.2.4",
     "classnames": "^2.3.1",
     "cra-template-typescript": "1.1.2",
     "node-sass": "^6.0.1",
@@ -76,7 +75,7 @@
     "eslint-config-alloy": "^4.3.0",
     "eslint-loader": "^4.0.2",
     "eslint-plugin-react": "^7.26.1",
-    "jest": "^26.6.0",
+    "jest": "26.6.0",
     "prettier": "^2.4.1"
   }
 }
