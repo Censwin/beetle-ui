@@ -1,7 +1,7 @@
 /*
  * @Author: Censwin
  * @Date: 2021-10-17 20:28:20
- * @LastEditTime: 2021-10-17 22:13:42
+ * @LastEditTime: 2021-10-18 13:38:52
  * @Description:
  * @FilePath: /whale-design/src/components/Input/input.stories.tsx
  */
@@ -23,6 +23,7 @@ const DefaultInput = () => {
       <Input placeholder="sm" size="sm" />
       <Input placeholder="defore" addonBefore="https://" />
       <Input placeholder="after"  addonAfter=".com"/>
+      <Input placeholder="befpre + after" addonBefore="https://" addonAfter=".com"/>
     </>
   )
 }

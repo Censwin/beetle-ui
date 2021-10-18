@@ -1,19 +1,20 @@
 .whale-input-wrapper {
   margin: 2px 0;
+  font-size: $input-default-font-size;
+  display: table;
   .whale-input {
+    display: table-cell;
     border: $border-width solid $border-color;
     border-radius: $border-radius;
-    border: none;
     width: 100%;
     box-sizing: border-box;
     color: $input-color;
     padding: $input-padding;
-    font-size: $input-default-font-size;
     background-image: none;
     &:focus {
       border-color: $primary;
       outline: 0;
-      box-shadow: 0 0 0 2px lighten($color: $primary, $amount: 40);
+      box-shadow: $input-box-showdow;
     }
     &[disabled] {
       color: rgba(0, 0, 0, 0.25);
@@ -31,8 +32,37 @@
 .is-disabled {
 }
 .input-group {
+  border: $border-width solid $border-color;
+  border-radius: $border-radius;
+  .whale-input {
+    border-color: transparent;
+  }
+  .input-icon-wrapper {
+    padding: 0 0.5rem;
+    display: table-cell;
+  }
+  .input-group-preand-wrapper,
+  .input-group-preand-wrapper {
+    display: table-cell;
+    vertical-align: middle;
+    background-color: $gray-100;
+    vertical-align: middle;
+    padding: 0 0.5rem;
+  }
 }
 .input-group-addonBefore {
+  .whale-input {
+    &:focus {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
 }
 .input-group-addonAfter {
+  .whale-input {
+    &:focus {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
 }
