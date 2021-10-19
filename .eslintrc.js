@@ -1,7 +1,7 @@
 /*
  * @Author: Censwin
  * @Date: 2021-10-08 23:47:45
- * @LastEditTime: 2021-10-16 18:57:14
+ * @LastEditTime: 2021-10-19 17:37:22
  * @Description:
  * @FilePath: /whale-design/.eslintrc.js
  */
@@ -12,25 +12,25 @@ module.exports = {
     jest: true,
   },
   extends: [
-    "alloy",
-    "alloy/react",
-    "alloy/typescript",
-    "plugin:jest/recommended",
+    'alloy',
+    'alloy/react',
+    'alloy/typescript',
+    'plugin:jest/recommended',
   ],
   settings: {
     react: {
-      version: "detect",
+      version: 'detect',
     },
   },
-  parser: "@typescript-eslint/parser",
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
     },
     ecmaVersion: 12,
-    sourceType: "module",
+    sourceType: 'module',
   },
-  plugins: ["react", "@typescript-eslint", "jest"],
-  rules: {},
-  ignorePatterns: ["stories/*", "src/stories/*"],
-};
+  plugins: ['react', '@typescript-eslint', 'jest'],
+  rules: { 'no-debugger': 'off' },
+  ignorePatterns: ['stories/*', 'src/stories/*'],
+}
