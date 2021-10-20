@@ -1,7 +1,7 @@
 /*
  * @Author: Censwin
  * @Date: 2021-10-18 22:44:43
- * @LastEditTime: 2021-10-19 17:56:02
+ * @LastEditTime: 2021-10-20 11:14:58
  * @Description: 
  * @FilePath: /whale-design/src/components/AutoComplete/autoCompete.stories.tsx
  */
@@ -11,7 +11,6 @@ import { action } from "@storybook/addon-actions";
 import { withInfo } from "@storybook/addon-info";
 
 import AutoComplete, {DataSourceType} from './autoComplete'
-import { Debounce } from "../../util";
  
 interface IdataList {
   value: string
@@ -23,7 +22,6 @@ const defaultAutoComplete = () => {
         return list
       })
     }
-    const DebounceFetch = Debounce(handleFetch, 500)
     const handleSelct = (val) => {
         console.log(val)
     }
@@ -32,7 +30,7 @@ const defaultAutoComplete = () => {
         <span>name: {item.value}</span>
       )
     }
-  return <AutoComplete filterOption={DebounceFetch} onSelect={handleSelct} renderOption={renderOption} />;
+  return <AutoComplete filterOption={handleFetch} onSelect={handleSelct} renderOption={renderOption} />;
 };
 
 storiesOf("AutoComplete", module)
