@@ -1,7 +1,7 @@
 /*
  * @Author: Censwin
  * @Date: 2021-10-08 23:47:45
- * @LastEditTime: 2021-10-08 23:56:13
+ * @LastEditTime: 2021-10-20 10:43:04
  * @Description:
  * @FilePath: /whale-design/.eslintrc.js
  */
@@ -31,5 +31,10 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: ['react', '@typescript-eslint', 'jest'],
-  rules: {},
+  rules: {
+    'no-debugger': 'off',
+    '@typescript-eslint/no-this-alias': ['off'],
+    '@typescript-eslint/no-invalid-this': ['off'],
+  },
+  ignorePatterns: ['stories/*', 'src/stories/*'],
 }
