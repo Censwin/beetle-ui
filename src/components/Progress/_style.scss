@@ -1,0 +1,26 @@
+.whale-progress-bar {
+  width: 100%;
+  height: 10px;
+  padding: 0 5px;
+  display: flex;
+  align-items: center;
+  .bar-inner {
+    position: relative;
+    flex-grow: 2;
+    width: 100%;
+    height: 100%;
+    background-color: $light-bg;
+    overflow: hidden;
+    border-radius: 10px;
+    .progress {
+      position: absolute;
+      height: 100%;
+      background-color: $primary;
+    }
+  }
+  .progress-text {
+    font-size: $font-size-sm;
+    color: $gray-600;
+    transform: scale(0.8);
+  }
+}

@@ -10,6 +10,7 @@ $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
 $black: #000 !default;
+$light-bg: #f5f5f5 !default;
 
 // 基础色
 $blue: #0d6efd !default;
@@ -251,3 +252,6 @@ $input-default-font-size: 14px;
 $input-lg-font-size: 16px;
 $input-sm-font-size: 12px;
 $input-box-showdow: 0 0 0 2px lighten($primary, 40);
+
+// // // Upload
+$upload-list-width: 300px;
