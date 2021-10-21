@@ -89,7 +89,11 @@ const Upload: React.FC<IUploadprops> = (props) => {
         },
       })
       .then((res) => {
-        updateFileInfo(currentFile, { status: 'success', response: res.data })
+        updateFileInfo(currentFile, {
+          status: 'success',
+          response: res.data,
+          percent: 100,
+        })
         if (onSuccess) {
           onSuccess(res.data, file)
         }
