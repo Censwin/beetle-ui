@@ -16,7 +16,7 @@ export interface IFileInfo {
 }
 export interface IUploadprops {
   action: string
-  defalutFileList: IFileInfo[]
+  defalutFileList?: IFileInfo[]
   onProgress?: (percentage: number, file: IFileInfo) => void
   onSuccess?: (data: any, file: IFileInfo) => void
   onError?: (err: any, file: IFileInfo) => void
@@ -155,7 +155,6 @@ const Upload: React.FC<IUploadprops> = (props) => {
       onRemove(file)
     }
   }
-  console.log(children)
   const renderContent = () => {
     if (children) {
       return children
@@ -178,6 +177,7 @@ const Upload: React.FC<IUploadprops> = (props) => {
         <input
           ref={InputRef}
           className="whale-file-input"
+          data-testid="whale-file-input"
           style={{ display: 'none' }}
           type="file"
           onChange={handleFileChange}

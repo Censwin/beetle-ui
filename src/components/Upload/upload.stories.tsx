@@ -52,7 +52,7 @@ const renderUpload = () => {
     // />
     <Upload 
       action="http://jsonplaceholder.typicode.com/posts" 
-      // dragable
+      dragable
       onChange={action('change')}
       // beforeUpload={changeFileName}
       defalutFileList={[]}

@@ -1,8 +1,8 @@
 .whale-upload-list {
   width: $upload-list-width;
   list-style: none;
-  border: $border-width dashed $border-color;
-  border-radius: $border-radius;
+  // border: $border-width dashed $border-color;
+  // border-radius: $border-radius;
   padding: 5px 0;
   font-size: $font-size-sm;
   .upload-list-item {
@@ -58,6 +58,7 @@
   padding: 1.5em 0;
   transition: border-color 0.3s;
   cursor: pointer;
+  background: #fafafa;
   // TODO: 修复层级问题
   // will-change: transform;
   // z-index: 1000;
@@ -69,7 +70,7 @@
     font-size: 3em;
     // will-change: transform;
     // z-index: 999;
-    color: $gray-400;
+    color: $gray-300;
     transition: color 0.3s;
     animation-duration: 2s;
     transform-origin: bottom;
