@@ -1,0 +1,95 @@
+.whale-upload-list {
+  width: $upload-list-width;
+  list-style: none;
+  // border: $border-width dashed $border-color;
+  // border-radius: $border-radius;
+  padding: 5px 0;
+  font-size: $font-size-sm;
+  .upload-list-item {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    .item-row {
+      height: 2em;
+      line-height: 2em;
+      text-indent: 1em;
+      display: table;
+      cursor: pointer;
+      .file-name {
+        svg {
+          font-size: 0.8em;
+          margin-right: 0.5em;
+        }
+      }
+      .file-operat {
+        display: none;
+        text-align: right;
+        padding-right: 1em;
+      }
+      .file-status {
+        display: table-cell;
+        text-align: right;
+        padding-right: 1em;
+      }
+      &:hover {
+        background-color: lighten($primary, 40);
+        & {
+          .file-status {
+            display: none;
+          }
+          .file-operat {
+            display: table-cell;
+          }
+        }
+      }
+    }
+  }
+}
+
+// // dragger
+.whale-dragger {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: $border-radius;
+  border: 2px dashed $border-color;
+  padding: 1.5em 0;
+  transition: border-color 0.3s;
+  cursor: pointer;
+  background: #fafafa;
+  // TODO: 修复层级问题
+  // will-change: transform;
+  // z-index: 1000;
+  .drag-pannel-icon {
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 0.6em;
+    height: 3em;
+    font-size: 3em;
+    // will-change: transform;
+    // z-index: 999;
+    color: $gray-300;
+    transition: color 0.3s;
+    animation-duration: 2s;
+    transform-origin: bottom;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
+  }
+  .drag-pannel-text {
+    transition: color 0.3s;
+    color: $gray-600;
+  }
+}
+
+.is-dragover {
+  border-color: $primary;
+  .drag-pannel-icon {
+    animation-name: bounce-7;
+    color: $primary;
+  }
+  .drag-pannel-text {
+    color: $primary;
+  }
+}
