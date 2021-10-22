@@ -1,7 +1,7 @@
 /*
  * @Author: Censwin
  * @Date: 2021-10-16 20:02:34
- * @LastEditTime: 2021-10-17 17:25:29
+ * @LastEditTime: 2021-10-20 17:21:47
  * @Description:
  * @FilePath: /whale-design/src/components/Button/button.stories.tsx
  */
@@ -19,19 +19,19 @@ const defaultButton = () => {
 const diffSizeBtn = () => {
   return (
     <>
-      <Button size={ButtonSize.Large}>large</Button>
-      <Button size={ButtonSize.Small}>small</Button>
+      <Button size="lg">large</Button>
+      <Button size="sm">small</Button>
     </>
   );
 };
 const diffTypeBtn = () => {
   return (
     <>
-      <Button btnType={ButtonType.Danger}>Danger</Button>
-      <Button btnType={ButtonType.Default}>Default</Button>
-      <Button btnType={ButtonType.Link}>Link</Button>
-      <Button btnType={ButtonType.Primary}>Primary</Button>
-      <Button btnType={ButtonType.Warning}>Warning</Button>
+      <Button btnType="danger">Danger</Button>
+      <Button btnType="default">Default</Button>
+      <Button btnType="link">Link</Button>
+      <Button btnType="primary">Primary</Button>
+      <Button btnType="warning">Warning</Button>
     </>
   );
 };
