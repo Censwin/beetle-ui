@@ -46,7 +46,7 @@ const UploadList: React.FC<IUploadListProps> = (props) => {
               />
             </span>
           </div>
-          <Progress percent={item.percent} />
+          {item.percent < 100 && <Progress percent={item.percent} />}
         </li>
       )
     })

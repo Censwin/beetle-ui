@@ -28,6 +28,6 @@ const Progress: React.FC<IProgressProps> = (props) => {
 }
 Progress.defaultProps = {
   percent: 0,
-  showInfo: true,
+  showInfo: false,
 }
 export default Progress

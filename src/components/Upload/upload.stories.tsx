@@ -2,7 +2,7 @@ import { action } from "@storybook/addon-actions";
 import { storiesOf } from "@storybook/react";
 import React from "react";
 import Upload, {UploadStatus} from "./upload";
-
+import Button from '../Button/button'
 
 const checkFileSize = (file: File) => {
   if (Math.round(file.size / 1024) > 50) {
@@ -52,11 +52,12 @@ const renderUpload = () => {
     // />
     <Upload 
       action="http://jsonplaceholder.typicode.com/posts" 
+      // dragable
       onChange={action('change')}
-      beforeUpload={changeFileName}
+      // beforeUpload={changeFileName}
       defalutFileList={[]}
       onRemove={action('Removed')}
-    />
+      multiple />
   )
 }
 

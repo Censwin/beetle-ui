@@ -45,3 +45,50 @@
     }
   }
 }
+
+// // dragger
+.whale-dragger {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: $border-radius;
+  border: 2px dashed $border-color;
+  padding: 1.5em 0;
+  transition: border-color 0.3s;
+  cursor: pointer;
+  // TODO: 修复层级问题
+  // will-change: transform;
+  // z-index: 1000;
+  .drag-pannel-icon {
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 0.6em;
+    height: 3em;
+    font-size: 3em;
+    // will-change: transform;
+    // z-index: 999;
+    color: $gray-400;
+    transition: color 0.3s;
+    animation-duration: 2s;
+    transform-origin: bottom;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
+  }
+  .drag-pannel-text {
+    transition: color 0.3s;
+    color: $gray-600;
+  }
+}
+
+.is-dragover {
+  border-color: $primary;
+  .drag-pannel-icon {
+    animation-name: bounce-7;
+    color: $primary;
+  }
+  .drag-pannel-text {
+    color: $primary;
+  }
+}
