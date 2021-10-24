@@ -1,9 +1,11 @@
  <p align="center"> 
  <a href="https://baidu.com"> 
-  <img width="200" src="https://freesvg.org/img/PeterM-Whale.png"> 
+  <img width="200" src="https://freesvg.org/img/1368310520.png"> 
  </a> 
  </p> 
-   <h1 align="center">Whale Design</h1> 
+   <h1 align="center">Beetle Design</h1> 
    <div align="center"> 
     An React UI library. 
   </div>
+        <h4>使用</h4>
+        <code>npm i beetle-ui</code>

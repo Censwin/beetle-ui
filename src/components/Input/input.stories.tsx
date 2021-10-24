@@ -1,9 +1,9 @@
 /*
  * @Author: Censwin
  * @Date: 2021-10-17 20:28:20
- * @LastEditTime: 2021-10-18 13:38:52
+ * @LastEditTime: 2021-10-24 22:31:29
  * @Description:
- * @FilePath: /whale-design/src/components/Input/input.stories.tsx
+ * @FilePath: /beetle-design/src/components/Input/input.stories.tsx
  */
 import React from "react";
 import { storiesOf } from "@storybook/react";

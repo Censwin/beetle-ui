@@ -1,10 +1,12 @@
 {
   "compilerOptions": {
-    "outDir": "build",
+    "outDir": "dist",
     "module": "esnext",
     "target": "es5",
     "declaration": true,
-    "jsx": "react"
+    "jsx": "react",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true
   },
   "include": ["src"],
   "exclude": ["src/**/*.test.tsx", "src/**/*.stories.tsx"]

@@ -1,9 +1,9 @@
 /*
  * @Author: Censwin
  * @Date: 2021-10-17 20:18:43
- * @LastEditTime: 2021-10-18 22:20:31
+ * @LastEditTime: 2021-10-24 22:31:26
  * @Description:
- * @FilePath: /whale-design/src/components/Input/input.tsx
+ * @FilePath: /beetle-design/src/components/Input/input.tsx
  */
 
 import React, { ChangeEvent, ReactElement } from "react";
@@ -35,7 +35,7 @@ const Input: React.FC<InputProps> = (props) => {
     className,
     ...otherProps
   } = props;
-  const classes = classNames("whale-input-wrapper", className, {
+  const classes = classNames("beetle-input-wrapper", className, {
     [`input-${size}`]: size,
     "is-disabled": disabled,
     "input-group": addonBefore || addonAfter || icon,
@@ -57,7 +57,7 @@ const Input: React.FC<InputProps> = (props) => {
       {addonBefore && (
         <span className="input-group-preand-wrapper">{addonBefore}</span>
       )}
-      <input className="whale-input" disabled={disabled} {...otherProps} />
+      <input className="beetle-input" disabled={disabled} {...otherProps} />
       {icon && (
         <span className="input-icon-wrapper">
           <Icon icon={icon} />

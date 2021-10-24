@@ -1,9 +1,9 @@
 /*
  * @Author: Censwin
  * @Date: 2021-10-11 23:09:21
- * @LastEditTime: 2021-10-16 16:35:17
+ * @LastEditTime: 2021-10-24 22:31:43
  * @Description:
- * @FilePath: /whale-design/src/components/Alert/alert.tsx
+ * @FilePath: /beetle-design/src/components/Alert/alert.tsx
  */
 import React, { useState, useEffect } from "react";
 import classNames from "classnames";

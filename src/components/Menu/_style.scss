@@ -1,4 +1,4 @@
-.whale-menu {
+.beetle-menu {
   display: flex;
   flex-direction: row;
   list-style: none;
@@ -56,7 +56,7 @@
       }
     }
   }
-  .whale-submenu {
+  .beetle-submenu {
     // display: none;
     list-style: none;
     padding-left: 0;
@@ -87,7 +87,7 @@
       transform: rotate(180deg);
     }
   }
-  // .whale-shubmenu-open {
+  // .beetle-shubmenu-open {
   //   display: block;
   // }
 }
@@ -112,7 +112,7 @@
   > .menu-item {
     border-bottom: 2px solid transparent;
   }
-  .whale-submenu {
+  .beetle-submenu {
     position: absolute;
     top: calc(100% + 7px);
     background: $white;

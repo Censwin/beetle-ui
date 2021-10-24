@@ -1,7 +1,7 @@
 /*
  * @Author: Censwin
  * @Date: 2021-10-16 16:06:59
- * @LastEditTime: 2021-10-16 16:24:55
+ * @LastEditTime: 2021-10-24 23:14:30
  * @Description:
  * @FilePath: /whale-design/src/components/Menu/subMenu.tsx
  */
@@ -29,7 +29,6 @@ const SubMenu: React.FC<ISubMenuProps> = (props) => {
     index && mode === "vertical" ? defaultOpen.includes(index) : false;
   const [showSubMenu, setShowSubMenu] = useState(isOpen);
   const formatIndex = _indexFromMenu.substr(0, _indexFromMenu.indexOf("-"));
-  console.log(formatIndex);
   const classes = classNames("menu-item menu-sub-item", className, {
     "menu-item-active": index === formatIndex,
     "is-opened": showSubMenu,
@@ -56,8 +55,8 @@ const SubMenu: React.FC<ISubMenuProps> = (props) => {
         }
       : {};
   const renderChildren = () => {
-    const classes = classNames("whale-submenu", {
-      "whale-shubmenu-open": showSubMenu,
+    const classes = classNames("beetle-submenu", {
+      "beetle-shubmenu-open": showSubMenu,
     });
     const childComponent = React.Children.map(children, (child, i) => {
       const childElement =

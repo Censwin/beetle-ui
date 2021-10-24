@@ -3,15 +3,15 @@
  * @Date: 2021-10-16 16:58:00
  * @LastEditTime: 2021-10-18 10:39:31
  * @Description:
- * @FilePath: /whale-design/.storybook/main.js
+ * @FilePath: /beetle-design/.storybook/main.js
  */
-const path = require('path')
+const path = require("path");
 module.exports = {
-  stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
+  stories: ["../src/**/*.stories.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
   addons: [
-    '@storybook/addon-links',
-    '@storybook/addon-essentials',
-    '@storybook/preset-create-react-app',
+    "@storybook/addon-links",
+    "@storybook/addon-essentials",
+    "@storybook/preset-create-react-app",
   ],
   webpackFinal: async (config, { configType }) => {
     // `configType` has a value of 'DEVELOPMENT' or 'PRODUCTION'
@@ -34,6 +34,6 @@ module.exports = {
     // });
 
     // Return the altered config
-    return config
+    return config;
   },
-}
+};
