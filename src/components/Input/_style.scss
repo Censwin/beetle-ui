@@ -1,8 +1,8 @@
-.whale-input-wrapper {
+.beetle-input-wrapper {
   margin: 2px 0;
   font-size: $input-default-font-size;
   display: table;
-  .whale-input {
+  .beetle-input {
     display: table-cell;
     border: $border-width solid $border-color;
     border-radius: $border-radius;
@@ -34,7 +34,7 @@
 .input-group {
   border: $border-width solid $border-color;
   border-radius: $border-radius;
-  .whale-input {
+  .beetle-input {
     border-color: transparent;
   }
   .input-icon-wrapper {
@@ -51,7 +51,7 @@
   }
 }
 .input-group-addonBefore {
-  .whale-input {
+  .beetle-input {
     &:focus {
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
@@ -59,7 +59,7 @@
   }
 }
 .input-group-addonAfter {
-  .whale-input {
+  .beetle-input {
     &:focus {
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
