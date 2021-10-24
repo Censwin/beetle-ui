@@ -1,9 +1,9 @@
 /*
  * @Author: Censwin
  * @Date: 2021-10-18 22:44:43
- * @LastEditTime: 2021-10-20 11:14:58
+ * @LastEditTime: 2021-10-24 22:31:41
  * @Description: 
- * @FilePath: /whale-design/src/components/AutoComplete/autoCompete.stories.tsx
+ * @FilePath: /beetle-design/src/components/AutoComplete/autoCompete.stories.tsx
  */
 import React from "react";
 import { storiesOf } from "@storybook/react";

@@ -1,18 +1,18 @@
 /*
  * @Author: Censwin
  * @Date: 2021-10-08 23:19:50
- * @LastEditTime: 2021-10-20 17:18:57
+ * @LastEditTime: 2021-10-24 22:32:52
  * @Description:
- * @FilePath: /whale-design/src/App.tsx
+ * @FilePath: /beetle-design/src/App.tsx
  */
-import React, { useState, useEffect } from 'react'
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { fas } from '@fortawesome/free-solid-svg-icons'
-import Upload from './components/Upload/upload'
-library.add(fas)
+import React, { useState, useEffect } from "react";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fas } from "@fortawesome/free-solid-svg-icons";
+import Upload from "./components/Upload/upload";
+library.add(fas);
 
 function App() {
-  const [title, setTitle] = useState('')
+  const [title, setTitle] = useState("");
 
   // const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
   //   const files = e.target.files
@@ -32,11 +32,11 @@ function App() {
   //   }
   // }
   return (
-    <div style={{ padding: '20px' }}>
+    <div style={{ padding: "20px" }}>
       {/* <input type="file" onChange={handleFileChange} /> */}
       <Upload action="http://jsonplaceholder.typicode.com/posts" />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

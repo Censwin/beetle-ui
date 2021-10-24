@@ -1,9 +1,9 @@
 /*
  * @Author: Censwin
  * @Date: 2021-10-16 20:02:34
- * @LastEditTime: 2021-10-20 17:21:47
+ * @LastEditTime: 2021-10-24 22:31:38
  * @Description:
- * @FilePath: /whale-design/src/components/Button/button.stories.tsx
+ * @FilePath: /beetle-design/src/components/Button/button.stories.tsx
  */
 
 import React from "react";
