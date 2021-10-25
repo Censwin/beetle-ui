@@ -9,5 +9,5 @@
   </div>
         <h4>使用</h4>
         <code>npm i beetle-ui</code>
-        <h4></h4>
+        <h4>文档地址</h4>
         <a href="https://censwin.github.io/beetle-ui/">beetle-ui</a>
