@@ -1,18 +1,28 @@
 /*
  * @Author: Censwin
  * @Date: 2021-10-16 16:58:00
- * @LastEditTime: 2021-10-18 10:39:31
+ * @LastEditTime: 2021-10-25 16:02:46
  * @Description:
  * @FilePath: /beetle-design/.storybook/main.js
  */
-const path = require("path");
+const path = require('path')
 module.exports = {
-  stories: ["../src/**/*.stories.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
+  stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
   addons: [
-    "@storybook/addon-links",
-    "@storybook/addon-essentials",
-    "@storybook/preset-create-react-app",
+    '@storybook/addon-links',
+    '@storybook/addon-essentials',
+    '@storybook/preset-create-react-app',
   ],
+  typescript: {
+    check: false,
+    checkOptions: {},
+    reactDocgen: 'react-docgen-typescript',
+    reactDocgenTypescriptOptions: {
+      shouldExtractLiteralValuesFromEnum: true,
+      propFilter: (prop) =>
+        prop.parent ? !/node_modules/.test(prop.parent.fileName) : true,
+    },
+  },
   webpackFinal: async (config, { configType }) => {
     // `configType` has a value of 'DEVELOPMENT' or 'PRODUCTION'
     // You can change the configuration based on that.
@@ -34,6 +44,6 @@ module.exports = {
     // });
 
     // Return the altered config
-    return config;
+    return config
   },
-};
+}

@@ -1,48 +1,48 @@
 /*
  * @Author: Censwin
  * @Date: 2021-10-16 20:02:34
- * @LastEditTime: 2021-10-24 22:31:38
+ * @LastEditTime: 2021-10-25 17:34:14
  * @Description:
  * @FilePath: /beetle-design/src/components/Button/button.stories.tsx
  */
 
 import React from "react";
-import { storiesOf } from "@storybook/react";
-import { action } from "@storybook/addon-actions";
+import {Meta, ComponentStory, ComponentMeta } from '@storybook/react'
+import Button from './button'
 
-import Button, { ButtonType, ButtonSize } from "./button";
-
-import { withInfo } from "@storybook/addon-info";
-const defaultButton = () => {
-  return <Button onClick={action("clicked")}>default</Button>;
-};
-const diffSizeBtn = () => {
-  return (
-    <>
-      <Button size="lg">large</Button>
-      <Button size="sm">small</Button>
-    </>
-  );
-};
-const diffTypeBtn = () => {
-  return (
-    <>
-      <Button btnType="danger">Danger</Button>
-      <Button btnType="default">Default</Button>
-      <Button btnType="link">Link</Button>
-      <Button btnType="primary">Primary</Button>
-      <Button btnType="warning">Warning</Button>
-    </>
-  );
-};
-storiesOf("Button", module)
-  .addDecorator(withInfo)
-  .addParameters({
-    info: {
-      text: "默认按钮样式",
-      inline: true,
+export default {
+  component: Button,
+  title: '通用/Button',
+  argTypes: {
+    size: {
+      options: ['lg', 'medium', 'sm'],
+      defaultValue: 'medium',
+      control: { type: 'radio' },
+      description: '控制按钮大小',
     },
-  })
-  .add("默认", defaultButton)
-  .add("大小", diffSizeBtn, { info: { inline: false } })
-  .add("样式", diffTypeBtn);
+    btnType: {
+      options: ['primary', 'default', 'warning', 'danger', 'link'],
+      defaultValue: 'default',
+      control: { type: 'radio' },
+      description: '控制按钮样式',
+    },
+    disabled: {
+      description: '禁用'
+    }
+  }
+};
+
+
+const Template: ComponentStory<typeof Button> = (args) => <Button {...args}>{args.btnType}</Button>
+
+export const Default = Template.bind({});
+Default.args = {
+  btnType: "default",
+  size: "medium",
+  disabled: false
+}
+export const Link = Template.bind({});
+Link.args = {
+  btnType: "link",
+  href: 'http://www.baidu.com'
+}

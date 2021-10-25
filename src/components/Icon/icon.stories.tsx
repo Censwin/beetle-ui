@@ -1,13 +1,14 @@
 import React from "react";
-import { storiesOf } from "@storybook/react";
-import { action } from "@storybook/addon-actions";
-import { withInfo } from "@storybook/addon-info";
+import Icon from './icon';
 
-import Icon from './icon'
+export default {
+  component: Icon,
+  title: '通用/Icon',
+}
 
-const defaultIcon = () => {
-  return <Icon icon="coffee"/>;
-};
-
-storiesOf("Icon", module)
-  .addDecorator(withInfo).add('图标', defaultIcon)
+const Template = (args) => <Icon {...args}/>
+export const Default = Template.bind({});
+Default.args = {
+  icon: 'coffee',
+  theme: 'primary'
+}

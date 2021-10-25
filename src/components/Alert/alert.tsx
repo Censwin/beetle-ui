@@ -1,35 +1,37 @@
 /*
  * @Author: Censwin
  * @Date: 2021-10-11 23:09:21
- * @LastEditTime: 2021-10-24 22:31:43
+ * @LastEditTime: 2021-10-25 18:03:54
  * @Description:
  * @FilePath: /beetle-design/src/components/Alert/alert.tsx
  */
-import React, { useState, useEffect } from "react";
-import classNames from "classnames";
-import Icon from "../Icon/icon";
-import { CSSTransition } from "react-transition-group";
+import React, { FC, useState, useEffect } from 'react'
+import classNames from 'classnames'
+import Icon from '../Icon/icon'
+import { CSSTransition } from 'react-transition-group'
 export enum Alerttype {
-  Success = "success",
-  Error = "error",
-  Warning = "warning",
-  Info = "info",
+  Success = 'success',
+  Error = 'error',
+  Warning = 'warning',
+  Info = 'info',
 }
+
+type alertType = 'success' | 'error' | 'warning' | 'info'
 interface IAlertProps {
-  type?: string;
-  message?: string;
-  title?: string;
-  closable?: boolean;
+  type?: alertType
+  message?: string
+  title?: string
+  closable?: boolean
 }
-const Alert: React.FC<IAlertProps> = (props) => {
-  const [show, setShow] = useState(false);
-  const { message, type, title, closable } = props;
-  const classes = classNames("alert", {
+const Alert: FC<IAlertProps> = (props) => {
+  const [show, setShow] = useState(false)
+  const { message, type, title, closable } = props
+  const classes = classNames('alert', {
     [`alert-${type}`]: type,
-  });
+  })
   useEffect(() => {
-    setShow(true);
-  }, []);
+    setShow(true)
+  }, [])
   return (
     <CSSTransition
       in={show}
@@ -45,7 +47,7 @@ const Alert: React.FC<IAlertProps> = (props) => {
           <span
             className="close-btn"
             onClick={() => {
-              setShow(false);
+              setShow(false)
             }}
           >
             <Icon icon="times-circle" />
@@ -53,10 +55,10 @@ const Alert: React.FC<IAlertProps> = (props) => {
         )}
       </div>
     </CSSTransition>
-  );
-};
+  )
+}
 Alert.defaultProps = {
-  type: Alerttype.Error,
+  type: 'success',
   closable: false,
-};
-export default Alert;
+}
+export default Alert
