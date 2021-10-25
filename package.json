@@ -44,7 +44,7 @@
     "lint": "eslint --ext js,ts,tsx src --max-warnings 10",
     "lint_fix": "eslint '{components,example}/**/*.{ts,tsx,js,jsx}' --fix",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public",
+    "build-storybook": "build-storybook -s public -o ./docs",
     "build-ts": "tsc -p tsconfig.build.json",
     "build-css": "node-sass ./src/styles/index.scss ./dist/index.css",
     "prepublishOnly": "npm run test:notwatch && npm run lint && npm run build"
