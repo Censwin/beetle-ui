@@ -9,5 +9,8 @@
   </div>
         <h4>使用</h4>
         <code>npm i beetle-ui</code>
+        <h5>引入样式</h5>
+        index中引入样式
+        <code>import 'beetle-ui/dist/index.css'</code>
         <h4>文档地址</h4>
         <a href="https://censwin.github.io/beetle-ui/">beetle-ui</a>
