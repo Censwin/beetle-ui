@@ -1,7 +1,12 @@
-import { action } from "@storybook/addon-actions";
-import { storiesOf } from "@storybook/react";
+/*
+ * @Author: Censwin
+ * @Date: 2021-10-24 23:33:38
+ * @LastEditTime: 2021-10-26 00:20:17
+ * @Description: 
+ * @FilePath: /whale-design/src/components/Upload/upload.stories.tsx
+ */
 import React from "react";
-import Upload, {UploadStatus} from "./upload";
+import Upload, {UploadStatus, IUploadprops} from "./upload";
 import Button from '../Button/button'
 
 const checkFileSize = (file: File) => {
@@ -42,23 +47,51 @@ const _defaultFileList = [
     percent: 30
   },
 ]
-const renderUpload = () => {
-  return (
-    // <Upload 
-    //   action="http://jsonplaceholder.typicode.com/posts" 
-    //   onProgress={action('progress')} 
-    //   onSuccess={action('success')} 
-    //   onError={action('error')} 
-    // />
-    <Upload 
-      action="http://jsonplaceholder.typicode.com/posts" 
-      dragable
-      onChange={action('change')}
-      // beforeUpload={changeFileName}
-      defalutFileList={[]}
-      onRemove={action('Removed')}
-      multiple />
-  )
+
+
+export default {
+  title: '表单/Upload',
+  component: Upload,
+  argTypes: {
+    action: {
+      description: '【必填】上传地址',
+    },
+    defalutFileList: {description: 'filelist 初始化数据；IFileInfo[]'},
+    onProgress: {description: 'function(perc, file)'},
+    onSuccess: {description: '成功回调；funtion(res, file)'},
+    onError: {description: '失败回调；funtion(err, file)'},
+    beforeUpload: {description: '上传前回调；funtion(file): boolean | Primise<File>'},
+    onChange: {description: '选中文件回调: function(file)'},
+    onRemove: {description: '移除文件回调: function(file)'},
+    name: {description: '上传的文件名'},
+    data: {description: '提交时额外数据'},
+    withCredentials: {description: '是否携带cookie'},
+    accept: {description: '接收的文件格式'},
+    multiple: {description: '是否多选'},
+    dragable: {description: '是否开启拖拽模式'},
+  }
+}
+const Template = (args: IUploadprops) => <Upload {...args}/>
+export const Default = Template.bind({})
+Default.args = {
+  action: 'http://jsonplaceholder.typicode.com/posts',
+  defalutFileList: [],
+  onProgress: () => {},
+  onSuccess: () => {},
+  onError: () => {},
+  beforeUpload: () => {},
+  onChange: () => {},
+  onRemove: () => {},
+  name: 'testFile',
+  data: {now: Date.now()},
+  withCredentials: true,
+  accept: '.jpg',
+  multiple: false,
+  dragable: false
 }
 
-storiesOf('Upload', module).add('Upload', renderUpload)
+export const Drag = Template.bind({})
+Drag.args = {
+  ...Default.args,
+  dragable: true
+}

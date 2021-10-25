@@ -47,7 +47,7 @@
     "build-storybook": "build-storybook -s public",
     "build-ts": "tsc -p tsconfig.build.json",
     "build-css": "node-sass ./src/styles/index.scss ./dist/index.css",
-    "prepublish": "npm run test:notwatch && npm run lint && npm run build"
+    "prepublishOnly": "npm run test:notwatch && npm run lint && npm run build"
   },
   "eslintConfig": {
     "extends": [
@@ -102,6 +102,7 @@
     "node-sass": "^6.0.1",
     "prettier": "^2.4.1",
     "react": "^17.0.2",
+    "react-docgen-typescript": "^2.1.1",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
     "typescript": "^4.4.3",
