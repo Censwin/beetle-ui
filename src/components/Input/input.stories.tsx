@@ -1,31 +1,52 @@
 /*
  * @Author: Censwin
  * @Date: 2021-10-17 20:28:20
- * @LastEditTime: 2021-10-24 22:31:29
+ * @LastEditTime: 2021-10-25 23:26:54
  * @Description:
- * @FilePath: /beetle-design/src/components/Input/input.stories.tsx
+ * @FilePath: /whale-design/src/components/Input/input.stories.tsx
  */
 import React from "react";
-import { storiesOf } from "@storybook/react";
-import { action } from "@storybook/addon-actions";
-
-import { withInfo } from "@storybook/addon-info";
 
 import Input, { InputProps } from "./input";
 
-const DefaultInput = () => {
-  return (
-    <>
-      <Input placeholder="input something" />
-      <Input placeholder="icon" icon="search" />
-      <Input placeholder="disbale" disabled />
-      <Input placeholder="lg" size="lg" />
-      <Input placeholder="sm" size="sm" />
-      <Input placeholder="defore" addonBefore="https://" />
-      <Input placeholder="after"  addonAfter=".com"/>
-      <Input placeholder="befpre + after" addonBefore="https://" addonAfter=".com"/>
-    </>
-  )
+export default {
+  title: '表单/Input',
+  component: Input,
+  argTypes: {
+    disabled: {
+      description: '禁用'
+    },
+    size: {
+      options: ['lg', 'medium', 'sm'],
+      defaultValue: 'medium',
+      control: { type: 'radio' },
+      description: '大小',
+    },
+    addonBefore: {
+      description: '前缀【可选】',
+    },
+    addonAfter: {
+      description: '后缀【可选】',
+    }
+  }
 }
 
-storiesOf("input", module).addDecorator(withInfo).add("input", DefaultInput);
+const Template = (args) => <Input placeholder="input something" {...args} />
+export const Default = Template.bind({});
+Default.args = {
+  disabled: false
+}
+export const IconInput = Template.bind({});
+IconInput.args = {
+  ...Default.args,
+  icon: "search",
+  placeholder: 'Icon'
+}
+
+export const AddonInput = Template.bind({});
+AddonInput.args = {
+  addonBefore: "https://",
+  addonAfter: ".com"
+}
+
+
