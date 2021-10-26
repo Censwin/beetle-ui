@@ -1,7 +1,7 @@
 /*
  * @Author: Censwin
  * @Date: 2021-10-24 23:19:43
- * @LastEditTime: 2021-10-26 10:45:15
+ * @LastEditTime: 2021-10-26 11:10:41
  * @Description: 
  * @FilePath: /whale-design/src/welcome.stories.tsx
  */
@@ -11,7 +11,7 @@ import { storiesOf } from '@storybook/react'
 storiesOf("welcome", module).add('welcome', () => {
     return (
         <>
-        <h1 align="center">Welcome 👋</h1>
+        <h1>Welcome 👋</h1>
         <hr />
         <h4>Install</h4>
         <code>npm i beetle-ui</code>
