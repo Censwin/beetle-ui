@@ -1,7 +1,7 @@
 /*
  * @Author: Censwin
  * @Date: 2021-10-24 23:19:43
- * @LastEditTime: 2021-10-26 00:22:38
+ * @LastEditTime: 2021-10-26 11:10:41
  * @Description: 
  * @FilePath: /whale-design/src/welcome.stories.tsx
  */
@@ -11,9 +11,21 @@ import { storiesOf } from '@storybook/react'
 storiesOf("welcome", module).add('welcome', () => {
     return (
         <>
-        <h1>Welcome</h1>
-        <h4>使用</h4>
+        <h1>Welcome 👋</h1>
+        <hr />
+        <h4>Install</h4>
         <code>npm i beetle-ui</code>
+        <hr />
+        <h4>Quick Start</h4>
+        <div>
+        <p><code>index.tsx</code> </p>
+        <img width="600px" src="https://user-images.githubusercontent.com/49546849/138799929-746b1859-9051-4780-92cc-07daa964a869.png" alt="" />
+        </div>
+        <div>
+            <p><code>App.tsx or other component</code></p>
+        <img width="600px" src="https://user-images.githubusercontent.com/49546849/138800059-7d87e553-5b8a-406f-b80e-7b07cc96f4c9.png" alt="" />
+        </div>
+        
         </>
     )
 }, {info: {disable: true}})
