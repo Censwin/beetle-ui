@@ -1,7 +1,7 @@
 /*
  * @Date: 2022-01-24 16:35:50
  * @LastEditors: k200c
- * @LastEditTime: 2022-01-24 16:53:03
+ * @LastEditTime: 2022-01-25 09:59:09
  * @Description: 
  * @FilePath: \whale-design\src\components\Message\message.stories.tsx
  */
@@ -15,6 +15,6 @@ export default {
   component: Message
 }
 
-const Template = (args) => <Button btnType='primary' onClick={() => Message.info('点我干嘛')}>点我</Button>
+const Template = (args) => <><Button btnType='primary' onClick={() => Message.info('点我干嘛')}>点我</Button><code>{"<Button btnType='primary' onClick={() => Message.info('点我干嘛')}>点我</Button>"}</code></>
 
 export const Default = Template.bind({});
