@@ -1,22 +1,34 @@
-import classNames from 'classnames';
-import React, { CSSProperties } from 'react';
-import { INativeProps } from '../../utils/common_interface';
+/*
+ * @Date: 2022-01-25 10:49:26
+ * @LastEditors: k200c
+ * @LastEditTime: 2022-01-25 11:48:28
+ * @Description:
+ * @FilePath: \whale-design\src\components\Card\Card.tsx
+ */
+import classNames from 'classnames'
+import React, { CSSProperties } from 'react'
+interface INativeProps<S extends string = never> {
+  className?: string
+  style?: React.CSSProperties & Partial<Record<S, string>>
+  tabIndex?: number
+}
 interface ICardProps {
-  title: React.ReactNode; // header 左边区域
-  extra?: React.ReactNode; // header 右边区域
-  headerStyle?: React.CSSProperties;
-  headerClassName?: string;
-  bodyStyle?: React.CSSProperties;
-  bodyClassName?: string;
-  onClick?: (event: MouseEvent) => void;
+  title: React.ReactNode // header 左边区域
+  extra?: React.ReactNode // header 右边区域
+  headerStyle?: React.CSSProperties
+  headerClassName?: string
+  bodyStyle?: React.CSSProperties
+  bodyClassName?: string
+  onClick?: (event: MouseEvent) => void
 }
 
 const Card: React.FC<ICardProps & INativeProps> = (props) => {
-  const { title, extra } = props;
-  const { className, headerClassName, headerStyle, bodyClassName, bodyStyle } = props;
-  const classes = classNames('card-wrapper', className);
-  const headerClasses = classNames('card-header', headerClassName);
-  const bodyClasses = classNames('card-body', bodyClassName);
+  const { title, extra } = props
+  const { className, headerClassName, headerStyle, bodyClassName, bodyStyle } =
+    props
+  const classes = classNames('card-wrapper', className)
+  const headerClasses = classNames('card-header', headerClassName)
+  const bodyClasses = classNames('card-body', bodyClassName)
   return (
     <div className={classes}>
       <div className={headerClasses} style={headerStyle}>
@@ -27,7 +39,7 @@ const Card: React.FC<ICardProps & INativeProps> = (props) => {
         {props.children}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Card;
+export default Card
