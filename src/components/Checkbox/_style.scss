@@ -1,0 +1,13 @@
+.checkbox-wrapper {
+  line-height: 2;
+  word-break: break-all;
+  display: block;
+  &:hover {
+    cursor: pointer;
+  }
+  input {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
