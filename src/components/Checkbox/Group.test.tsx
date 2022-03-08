@@ -62,7 +62,7 @@ describe('Group', () => {
       expect(element).toBeChecked()
     })
 
-    it('should pass the correct value into the onChange ', () => {
+    it('should pass the correct value into the onChange', () => {
       const [target1, target2] = Array.from(
         container.querySelectorAll('input')
       ) as Array<HTMLInputElement>
