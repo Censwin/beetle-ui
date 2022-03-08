@@ -14,11 +14,7 @@ export interface ITabsProps
   children: React.ReactNode
 }
 
-const parseTabList = () => {}
-
 const Tabs: React.FC<ITabsProps> = (props) => {
   const { children } = props
-  const tabs = parseTabList()
-  1
   return <div className={classNames('beetle-tabs')}>123</div>
 }
