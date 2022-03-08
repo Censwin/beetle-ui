@@ -1,21 +1,21 @@
 import React, { FC, useEffect, useState, useCallback, useMemo } from 'react'
 import Checkbox from './Checkbox'
 
-interface Option {
+interface IOption {
   label: string
   value: string
 }
 
-interface Props {
-  options: Option[]
+export interface IGroupProps {
+  options: IOption[]
   columns?: number
   values?: string[]
-  onChange?: (options: Option[]) => void
+  onChange?: (options: IOption[]) => void
 }
 
 type ValueType = String | Number
 
-const InternalGroup: FC<Props> = (props) => {
+const InternalGroup: FC<IGroupProps> = (props) => {
   const { options, columns, values } = props
   const { onChange } = props
   const [value, setValue] = useState<ValueType[]>(values || [])
@@ -31,7 +31,7 @@ const InternalGroup: FC<Props> = (props) => {
   }, [value])
 
   const clickOption = useCallback(
-    (option: Option) => {
+    (option: IOption) => {
       const index = value.indexOf(option.value)
       let newValue = [...value]
       if (index === -1) {
@@ -45,7 +45,7 @@ const InternalGroup: FC<Props> = (props) => {
   )
 
   const RenderChildrenCheckbox = useMemo(() => {
-    let children = options.map((option: Option, index: number) => {
+    let children = options.map((option: IOption, index: number) => {
       return (
         <React.Fragment key={option.value + index}>
           <Checkbox

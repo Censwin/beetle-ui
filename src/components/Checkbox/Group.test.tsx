@@ -9,9 +9,9 @@ import {
   cleanup,
 } from '@testing-library/react'
 
-import { Group, Props } from './Group'
+import Group, { IGroupProps } from './Group'
 
-const defaultProps: Props = {
+const defaultProps: IGroupProps = {
   options: [
     { label: 'aaa', value: '111' },
     { label: 'bbb', value: '222' },
@@ -36,14 +36,6 @@ describe('Group', () => {
       render(<Group {...defaultProps} />)
       const GroupElement = screen.getByTestId('Group-test')
       expect(GroupElement).toBeInTheDocument()
-    })
-
-    it('renders the label if label provided', () => {
-      let label = 'test label'
-      const wrapper = render(<Group label={label} {...defaultProps} />)
-      const target = wrapper.getByTestId('GroupLabel')
-      expect(target).toBeInTheDocument()
-      expect(target.innerHTML).toEqual(label)
     })
   })
   describe('select test', () => {
@@ -71,7 +63,7 @@ describe('Group', () => {
     })
 
     it('should pass the correct value into the onChange ', () => {
-      const [selectAll, target1, target2] = Array.from(
+      const [target1, target2] = Array.from(
         container.querySelectorAll('input')
       ) as Array<HTMLInputElement>
       // check
@@ -90,49 +82,6 @@ describe('Group', () => {
       expect(target1.checked).toEqual(false)
       expect(target2.checked).toEqual(false)
       expect(mockFn).toBeCalledWith([])
-    })
-
-    it('should selected all option or not when the `check All` clicked', () => {
-      const [selectAll, target1, target2] = Array.from(
-        container.querySelectorAll('input')
-      ) as Array<HTMLInputElement>
-      // check
-      fireEvent.click(selectAll)
-      expect(selectAll.checked).toEqual(true)
-      expect(target1.checked).toEqual(true)
-      expect(target2.checked).toEqual(true)
-      expect(mockFn).toBeCalledWith([
-        { label: 'aaa', value: '111' },
-        { label: 'bbb', value: '222' },
-      ])
-      // uncheck
-      fireEvent.click(selectAll)
-      expect(selectAll.checked).toEqual(false)
-      expect(target1.checked).toEqual(false)
-      expect(target2.checked).toEqual(false)
-      expect(mockFn).lastCalledWith([])
-    })
-
-    it('should checked the `check All` when the all options was selected', () => {
-      const [selectAll, target1, target2] = Array.from(
-        container.querySelectorAll('input')
-      ) as Array<HTMLInputElement>
-      // check
-      fireEvent.click(target1)
-      fireEvent.click(target2)
-      expect(selectAll).toBeChecked()
-      // anyone unchecked
-      fireEvent.click(target2)
-      expect(selectAll).not.toBeChecked()
-    })
-  })
-
-  describe('columns test', () => {
-    it('render specifies column if `columns` provided', () => {
-      const { container } = render(<Group {...defaultProps} columns={2} />)
-      expect(container.querySelectorAll('br').length).toBe(1)
-      render(<Group {...defaultProps} columns={5} />, { container })
-      expect(container.querySelectorAll('br').length).toBe(4)
     })
   })
 })
