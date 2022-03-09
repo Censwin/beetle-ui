@@ -5,6 +5,22 @@
  * @Description:
  * @FilePath: \whale-design\src\components\Tabs\TabContext.ts
  */
-import { createContext } from 'react'
+import React, { createContext } from 'react'
 
-export default createContext(null)
+export interface ITabPanelProps {
+  label?: string
+  activeKey?: string
+  children?: React.ReactNode
+  active?: boolean
+}
+
+export interface ITab extends ITabPanelProps {
+  key: string
+  node: React.ReactElement
+}
+
+export interface ITabContextProps {
+  tabs: ITab[]
+}
+
+export default createContext<ITabContextProps | null>(null)
