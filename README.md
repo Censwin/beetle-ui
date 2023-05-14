@@ -23,9 +23,10 @@
 ### 📃 [文档地址](https://censwin.github.io/beetle-ui/)
 
 ## Install
-
+> using Node 16.2.0
+> using pnpm
 ```sh
-npm install --legacy-peer-deps
+pnpm install --legacy-peer-deps
 ```
 
 ## Usage
