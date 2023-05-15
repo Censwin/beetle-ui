@@ -33,13 +33,13 @@ npm install --legacy-peer-deps
 ## Usage
 
 ```sh
-npm run start
+pnpm run start
 ```
 
 ## Run tests
 
 ```sh
-npm run test
+pnpm run test
 ```
 
 ## Author
